@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>富永建具｜Tominaga Tategu</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@400;700&display=swap" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              'base': '#F5F5F3',      // Porcelain
+              'text-main': '#1E1E1E', // Carbon
+              'text-sub': '#3C3C3C',    // Graphite
+              'border': '#E3E3E0',   // Ash
+              'accent-a': '#B88B4A',   // Brass
+              'accent-b': '#0E1A16',   // Forest Ink
+              'feedback-ok': '#1F7A5B', // Pine
+              'feedback-ng': '#B44A3C', // Brick
+            },
+            fontFamily: {
+              sans: ['Inter', 'Noto Sans JP', 'sans-serif'],
+              serif: ['Noto Serif JP', 'serif'],
+            },
+            animation: {
+              'scroll-indicator': 'scroll-indicator 2.5s ease-out infinite',
+            },
+            keyframes: {
+              'scroll-indicator': {
+                '0%': { transform: 'translateY(-100%)' },
+                '60%, 100%': { transform: 'translateY(100%)' },
+              }
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      .tcy {
+        text-combine-upright: digits 2;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://aistudiocdn.com/react@^19.1.1/",
+    "react": "https://aistudiocdn.com/react@^19.1.1",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.1.1/",
+    "react-router-dom": "https://aistudiocdn.com/react-router-dom@^7.9.1"
+  }
+}
+</script>
+</head>
+  <body class="bg-base text-text-main font-sans">
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
