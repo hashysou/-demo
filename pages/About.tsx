@@ -11,11 +11,12 @@ const PageHeader: React.FC<{ title: string, subtitle: string }> = ({ title, subt
 
 const About: React.FC = () => {
     const history = [
-        { year: '1960', event: '富永建具店として創業。地域の住宅向け建具の製作を開始。' },
-        { year: '1985', event: '法人化し、有限会社富永建具となる。設備投資を行い、生産能力を拡大。' },
-        { year: '2005', event: '商業施設向けの特注什器製作を開始。B2B事業を本格化。' },
-        { year: '2020', event: '設計部門を新設。デザイン提案から一貫して請け負う体制を構築。' },
-        { year: '2025', event: 'WEBサイトを全面リニューアル。B2C向けオーダーメイドサービスを強化。' },
+        { year: '1922', event: '富永建具店として創業。地域の住宅向け建具の製作を開始。' },
+        { year: '1972', event: '法人化し、有限会社富永建具を設立。' },
+        { year: '1999', event: 'U.G FURNITUREを設立し、オリジナル家具事業を開始。' },
+        { year: '2014', event: '富永康弘が代表取締役会長に、富永祐司が代表取締役社長に就任。' },
+        { year: '2019', event: 'ロゴを一新し、ブランドイメージ化を強化。' },
+        { year: '2024', event: 'CNCルーターを導入し、製造の効率化を高める。' },
     ];
 
     return (
@@ -31,8 +32,15 @@ const About: React.FC = () => {
                         <div className="lg:pl-8">
                             <h2 className="text-3xl font-serif font-bold text-text-main">代表メッセージ</h2>
                             <p className="mt-6 text-text-sub leading-relaxed">
-                                創業から半世紀以上、私たちは一貫して「木」という素材と向き合い、その可能性を追求してきました。一本一本異なる木目、手触り、香り。その個性を最大限に引き出し、お客様の暮らしに寄り添うものづくりをすることが、私たちの喜びです。<br/><br/>
-                                時代が変わり、求められるデザインや機能は変化しても、私たちの根底にある「質の高い手仕事」へのこだわりは変わりません。これからも、技術を磨き、感性を研ぎ澄ませ、一枚の建具、一台の家具に心を込めて、お客様の想いを形にし続けてまいります。
+                                創業以来、私たちは「木」という素材と向き合い、その可能性を追求してきました。
+一本一本異なる木目、手触り、香り。
+その個性を見極め、最大限に引き出すことで、お客様の暮らしに寄り添うものづくりができると考えています。
+基本となる図面は同じでも、仕上がりはつくり手によって変わります。
+<br/><br/>
+                                私たちが大切にしているのは、「お客様の思っていた以上のモノを作る」こと。
+そして同時に、「自分自身の思っていた以上のモノを作る」ことです。
+技術を磨き、感性を研ぎ澄まし、一枚の建具、一台の家具に心を込める。
+これからも、建具・家具づくりを通して空間に価値をもたらし続けてまいります。
                             </p>
                         </div>
                     </div>
@@ -61,8 +69,8 @@ const About: React.FC = () => {
                     <dl className="space-y-6">
                         <div className="flex flex-col md:flex-row"><dt className="w-full md:w-1/4 font-semibold text-text-main">社名</dt><dd className="w-full md:w-3/4 text-text-sub mt-1 md:mt-0">有限会社富永建具</dd></div>
                         <div className="flex flex-col md:flex-row"><dt className="w-full md:w-1/4 font-semibold text-text-main">事業内容</dt><dd className="w-full md:w-3/4 text-text-sub mt-1 md:mt-0">木製建具・家具・什器の設計、製造、販売、施工</dd></div>
-                        <div className="flex flex-col md:flex-row"><dt className="w-full md:w-1/4 font-semibold text-text-main">許認可</dt><dd className="w-full md:w-3/4 text-text-sub mt-1 md:mt-0">建設業許可 徳島県知事 (般-XX) 第XXXXX号</dd></div>
-                        <div className="flex flex-col md:flex-row"><dt className="w-full md:w-1/4 font-semibold text-text-main">所在地</dt><dd className="w-full md:w-3/4 text-text-sub mt-1 md:mt-0">〒XXX-XXXX 徳島県徳島市...</dd></div>
+                        <div className="flex flex-col md:flex-row"><dt className="w-full md:w-1/4 font-semibold text-text-main">許認可</dt><dd className="w-full md:w-3/4 text-text-sub mt-1 md:mt-0">建設業許可 徳島県知事 (般-04) 第30069号</dd></div>
+                        <div className="flex flex-col md:flex-row"><dt className="w-full md:w-1/4 font-semibold text-text-main">所在地</dt><dd className="w-full md:w-3/4 text-text-sub mt-1 md:mt-0">〒779-1102  徳島県阿南市羽ノ浦町宮倉芝生13-7</dd></div>
                     </dl>
                 </div>
             </div>

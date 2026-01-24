@@ -9,9 +9,9 @@ const Footer: React.FC = () => {
           <div className="md:col-span-2">
             <h3 className="text-2xl font-serif font-bold text-base">富永建具</h3>
             <p className="mt-2 text-sm text-gray-400">
-              〒XXX-XXXX 徳島県徳島市...<br />
-              TEL: 088-XXX-XXXX (受付時間: 平日 9:00-17:00)<br />
-              MAIL: info@tominaga-tategu.test
+              〒779-1102  徳島県阿南市羽ノ浦町宮倉芝生13-7<br />
+              TEL: 0884-44-2369 (受付時間: 平日 9:00-17:00)<br />
+              MAIL: tominaga@chive.ocn.ne.jp
             </p>
             <div className="mt-4 flex space-x-4">
               <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-base transition-colors">

@@ -11,7 +11,7 @@ export type SectionHeadingProps = {
   titleFlow?: TitleFlow;
   eyebrow?: React.ReactNode;
   title: React.ReactNode;
-  subtitle?: string;
+  subtitle?: React.ReactNode;
   meta?: string;
   actions?: React.ReactNode;
   className?: string;
@@ -58,12 +58,12 @@ const SectionHeading: React.FC<SectionHeadingProps> = ({
         {title}
       </h2>
       {subtitle && (
-        <p className={[
-          'leading-loose max-w-[45em]',
+        <div className={[
+          'leading-loose max-w-[45em] text-text-sub',
           isSplitVertical ? 'mb-6 md:col-start-3 md:row-start-1' : 'mb-6'
         ].join(' ')}>
           {subtitle}
-        </p>
+        </div>
       )}
       {meta && (
         <div className={[

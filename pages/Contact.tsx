@@ -24,11 +24,11 @@ const Contact: React.FC = () => {
       brandLogoAlt: "有限会社富永建具 ロゴ",
       brandNameSrOnly: "有限会社富永建具",
       company: {
-        address: "〒XXX-XXXX 徳島県徳島市◯◯◯◯",
+        address: "〒779-1102  徳島県阿南市羽ノ浦町宮倉芝生13-7",
         mapUrl: "https://maps.google.com/?q=徳島市◯◯◯◯",
-        tel: "088-XXX-XXXX",
-        fax: "088-XXX-XXXX",
-        email: "info@tominaga-tategu.test",
+        tel: "TEL 0884-44-2369",
+        fax: "0884-44-2061",
+        email: "tominaga@chive.ocn.ne.jp",
         hours: "平日 9:00-18:00"
       },
       socials: [
