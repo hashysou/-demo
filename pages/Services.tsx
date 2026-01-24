@@ -2,12 +2,15 @@ import React, { useState, useMemo } from 'react';
 import { Link } from 'react-router-dom';
 import { worksData } from '../data/worksData';
 import { Work } from '../types';
+import ScrollReveal from '../components/ScrollReveal';
 
 const PageHeader: React.FC<{ title: string, subtitle: string }> = ({ title, subtitle }) => (
     <div className="bg-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24 text-center">
-            <p className="text-sm font-semibold text-accent-a tracking-widest uppercase">{subtitle}</p>
-            <h1 className="mt-2 text-4xl md:text-5xl font-serif font-bold text-text-main">{title}</h1>
+            <ScrollReveal>
+                <p className="text-sm font-semibold text-accent-a tracking-widest uppercase">{subtitle}</p>
+                <h1 className="mt-2 text-4xl md:text-5xl font-serif font-bold text-text-main">{title}</h1>
+            </ScrollReveal>
         </div>
     </div>
 );
@@ -23,39 +26,41 @@ const ServiceSection: React.FC<{
     imageLeft?: boolean;
 }> = ({ title, subtitle, description, imageUrl, flow, ctaLink, ctaState, imageLeft = false }) => (
     <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24">
-        <div className={`grid grid-cols-1 lg:grid-cols-2 gap-16 items-center`}>
-            <div className={` ${imageLeft ? 'lg:order-1' : 'lg:order-2'}`}>
-                <img src={imageUrl} alt={title} className="w-full h-auto object-cover rounded-sm" />
-            </div>
-            <div className={`${imageLeft ? 'lg:order-2' : 'lg:order-1'}`}>
-                <p className="font-semibold text-accent-a">{subtitle}</p>
-                <h2 className="mt-2 text-3xl font-serif font-bold text-text-main">{title}</h2>
-                <p className="mt-6 text-text-sub leading-relaxed">{description}</p>
-                
-                <div className="mt-10">
-                    <h3 className="text-xl font-semibold text-text-main mb-6">製作の流れ</h3>
-                    <ol className="space-y-6">
-                        {flow.map((step, index) => (
-                            <li key={index} className="flex">
-                                <span className="flex items-center justify-center w-8 h-8 font-bold bg-accent-a text-white rounded-full mr-4 flex-shrink-0">
-                                    {index + 1}
-                                </span>
-                                <div>
-                                    <h4 className="font-semibold text-text-main">{step.title}</h4>
-                                    <p className="mt-1 text-sm text-text-sub">{step.desc}</p>
-                                </div>
-                            </li>
-                        ))}
-                    </ol>
+        <ScrollReveal>
+            <div className={`grid grid-cols-1 lg:grid-cols-2 gap-16 items-center`}>
+                <div className={` ${imageLeft ? 'lg:order-1' : 'lg:order-2'}`}>
+                    <img src={imageUrl} alt={title} className="w-full h-auto object-cover rounded-sm" />
                 </div>
+                <div className={`${imageLeft ? 'lg:order-2' : 'lg:order-1'}`}>
+                    <p className="font-semibold text-accent-a">{subtitle}</p>
+                    <h2 className="mt-2 text-3xl font-serif font-bold text-text-main">{title}</h2>
+                    <p className="mt-6 text-text-sub leading-relaxed">{description}</p>
+                    
+                    <div className="mt-10">
+                        <h3 className="text-xl font-semibold text-text-main mb-6">製作の流れ</h3>
+                        <ol className="space-y-6">
+                            {flow.map((step, index) => (
+                                <li key={index} className="flex">
+                                    <span className="flex items-center justify-center w-8 h-8 font-bold bg-accent-a text-white rounded-full mr-4 flex-shrink-0">
+                                        {index + 1}
+                                    </span>
+                                    <div>
+                                        <h4 className="font-semibold text-text-main">{step.title}</h4>
+                                        <p className="mt-1 text-sm text-text-sub">{step.desc}</p>
+                                    </div>
+                                </li>
+                            ))}
+                        </ol>
+                    </div>
 
-                <div className="mt-10">
-                    <Link to={ctaLink} state={ctaState} className="inline-block bg-accent-a text-white font-medium py-3 px-8 rounded-sm hover:bg-opacity-90 transition-all duration-300">
-                        このサービスについて問い合わせる
-                    </Link>
+                    <div className="mt-10">
+                        <Link to={ctaLink} state={ctaState} className="inline-block bg-accent-a text-white font-medium py-3 px-8 rounded-sm hover:bg-opacity-90 transition-all duration-300">
+                            このサービスについて問い合わせる
+                        </Link>
+                    </div>
                 </div>
             </div>
-        </div>
+        </ScrollReveal>
     </div>
 );
 
@@ -150,35 +155,37 @@ const Services: React.FC = () => {
             />
 
             <div id="works-gallery" className="container mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24">
-                <div className="text-center mb-12">
-                    <h2 className="text-3xl font-serif font-bold text-text-main">事例紹介</h2>
-                    <p className="mt-4 max-w-2xl mx-auto text-text-sub">私たちの仕事の一部をご紹介します。デザインから納品までのストーリーをご覧ください。</p>
-                </div>
+                <ScrollReveal>
+                    <div className="text-center mb-12">
+                        <h2 className="text-3xl font-serif font-bold text-text-main">事例紹介</h2>
+                        <p className="mt-4 max-w-2xl mx-auto text-text-sub">私たちの仕事の一部をご紹介します。デザインから納品までのストーリーをご覧ください。</p>
+                    </div>
 
-                <div className="sticky top-16 bg-base/90 backdrop-blur-sm z-10 py-4 mb-8 border-b border-border">
-                    <div className="flex flex-col sm:flex-row flex-wrap items-start sm:items-center gap-x-8 gap-y-4">
-                        <div className="flex items-center gap-2 flex-wrap">
-                            <span className="text-sm font-semibold mr-2">カテゴリ:</span>
-                            {categories.map(cat => (
-                                <FilterButton key={cat} label={cat} value={cat} activeValue={filters.category} onClick={(v) => handleFilterChange('category', v)} />
-                            ))}
-                        </div>
-                        <div className="flex items-center gap-2 flex-wrap">
-                            <span className="text-sm font-semibold mr-2">顧客区分:</span>
-                             {clientTypes.map(type => (
-                                <FilterButton key={type} label={type} value={type} activeValue={filters.clientType} onClick={(v) => handleFilterChange('clientType', v)} />
-                            ))}
+                    <div className="sticky top-16 bg-base/90 backdrop-blur-sm z-10 py-4 mb-8 border-b border-border">
+                        <div className="flex flex-col sm:flex-row flex-wrap items-start sm:items-center gap-x-8 gap-y-4">
+                            <div className="flex items-center gap-2 flex-wrap">
+                                <span className="text-sm font-semibold mr-2">カテゴリ:</span>
+                                {categories.map(cat => (
+                                    <FilterButton key={cat} label={cat} value={cat} activeValue={filters.category} onClick={(v) => handleFilterChange('category', v)} />
+                                ))}
+                            </div>
+                            <div className="flex items-center gap-2 flex-wrap">
+                                <span className="text-sm font-semibold mr-2">顧客区分:</span>
+                                {clientTypes.map(type => (
+                                    <FilterButton key={type} label={type} value={type} activeValue={filters.clientType} onClick={(v) => handleFilterChange('clientType', v)} />
+                                ))}
+                            </div>
                         </div>
                     </div>
-                </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-12">
-                    {filteredWorks.length > 0 ? (
-                        filteredWorks.map(work => <WorkCard key={work.id} work={work} />)
-                    ) : (
-                        <p className="col-span-full text-center text-text-sub py-12">該当する事例が見つかりませんでした。</p>
-                    )}
-                </div>
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-12">
+                        {filteredWorks.length > 0 ? (
+                            filteredWorks.map(work => <WorkCard key={work.id} work={work} />)
+                        ) : (
+                            <p className="col-span-full text-center text-text-sub py-12">該当する事例が見つかりませんでした。</p>
+                        )}
+                    </div>
+                </ScrollReveal>
             </div>
         </div>
     );
