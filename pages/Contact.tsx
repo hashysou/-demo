@@ -23,7 +23,7 @@ const Contact: React.FC = () => {
         socials: SocialLink[];
         affiliations: Affiliation[];
     } = {
-      brandLogoSrc: "https://assets.codepen.io/3/tominaga-tategu-logo-black.svg",
+      brandLogoSrc: "https://drive.google.com/uc?export=view&id=1BW3ozZ-qQdl7yGncQG9z8-sBx08olhaO",
       brandLogoAlt: "有限会社富永建具 ロゴ",
       brandNameSrOnly: "有限会社富永建具",
       company: {

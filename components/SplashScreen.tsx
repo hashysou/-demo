@@ -13,7 +13,7 @@ const SplashScreen: React.FC<SplashScreenProps> = ({ show }) => {
       aria-hidden={!show}
     >
       <img
-        src="https://assets.codepen.io/3/tominaga-tategu-logo-black.svg"
+        src="https://drive.google.com/uc?export=view&id=1BW3ozZ-qQdl7yGncQG9z8-sBx08olhaO"
         alt="富永建具 ロゴ"
         className="w-48 md:w-64"
       />

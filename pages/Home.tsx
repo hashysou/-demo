@@ -5,17 +5,28 @@ import { Work } from '../types';
 import SectionHeading from '../components/SectionHeading';
 import ScrollReveal from '../components/ScrollReveal';
 
+// 画像パスの設定
+// プロジェクトルートの 'image' フォルダ内に '1.jpg', '2.jpg', '3.jpg' を配置してください。
+// 画像が見つからない場合は自動的にUnsplashの画像が表示されます。
 const heroImages = [
-  'https://images.unsplash.com/photo-1595675024-8b028e52198e?q=80&w=1920&auto=format&fit=crop', // craftsman
-  'https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?q=80&w=1920&auto=format&fit=crop', // interior
-  'https://images.unsplash.com/photo-1581092446333-cece8a959a45?q=80&w=1920&auto=format&fit=crop', // workshop tools
-  'https://images.unsplash.com/photo-1588854337236-6889d631f385?q=80&w=1920&auto=format&fit=crop', // door
+  '/image/1.jpg',
+  '/image/2.jpg',
+  '/image/3.jpg',
+];
+
+const fallbackImages = [
+  'https://images.unsplash.com/photo-1595675024-8b028e52198e?q=80&w=1920&auto=format&fit=crop',
+  'https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?q=80&w=1920&auto=format&fit=crop',
+  'https://images.unsplash.com/photo-1581092446333-cece8a959a45?q=80&w=1920&auto=format&fit=crop',
 ];
 
 const Hero: React.FC = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
   useEffect(() => {
+    // 画像が1枚以下の場合はスライドショーを行わない
+    if (heroImages.length <= 1) return;
+
     const timer = setInterval(() => {
       setCurrentImageIndex((prevIndex) => (prevIndex + 1) % heroImages.length);
     }, 5000); // Change image every 5 seconds
@@ -34,6 +45,14 @@ const Hero: React.FC = () => {
           className={`absolute inset-0 z-0 w-full h-full object-cover transition-opacity duration-1000 ease-in-out ${
             index === currentImageIndex ? 'opacity-100' : 'opacity-0'
           }`}
+          onError={(e) => {
+            // 画像読み込みエラー時に非表示にせず、フォールバック画像に差し替える
+            const target = e.currentTarget;
+            target.onerror = null; // 無限ループ防止
+            target.src = fallbackImages[index % fallbackImages.length];
+            // コンソールにエラーを表示（デバッグ用）
+            console.warn(`Failed to load image: ${src}. using fallback.`);
+          }}
         />
       ))}
 
@@ -44,7 +63,7 @@ const Hero: React.FC = () => {
       <div className="relative z-20 p-8 md:p-16 text-right text-base">
           <h1 className="sr-only">富永建具</h1>
           <img 
-              src="https://assets.codepen.io/3/tominaga-tategu-logo-white.svg" 
+              src="https://drive.google.com/uc?export=view&id=1BW3ozZ-qQdl7yGncQG9z8-sBx08olhaO" 
               alt="富永建具 ロゴ" 
               className="w-48 md:w-64 ml-auto mb-8" 
           />
