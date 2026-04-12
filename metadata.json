@@ -1,5 +1,5 @@
 {
   "name": "Tominaga Tategu Website",
-  "description": "A modern, minimalist website for Tominaga Tategu, a joinery company, showcasing their craftsmanship, portfolio, and services for both B2B and B2C clients. Built with React and Tailwind CSS.",
+  "description": "A static HTML, CSS, and JavaScript website for Tominaga Tategu, preserving the original multi-page structure while showcasing craftsmanship, portfolio pieces, and B2B/B2C services.",
   "requestFramePermissions": []
 }
