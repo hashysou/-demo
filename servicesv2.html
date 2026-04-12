@@ -1,0 +1,932 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta
+    name="description"
+    content="富永建具の事業紹介改善版。法人案件の建具・什器製作から、個人向けオーダーメイド家具まで、設計・製作・施工の流れと事例を紹介しています。" />
+  <title>事業・事例紹介 v2｜Tominaga Tategu</title>
+  <script>
+    document.documentElement.classList.add('js-enabled');
+    try {
+      if (sessionStorage.getItem('splashSeen')) {
+        document.documentElement.classList.add('splash-seen');
+      }
+    } catch (error) {
+      console.warn('sessionStorage is unavailable.');
+    }
+  </script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Noto+Sans+JP:wght@400;500;700&amp;family=Noto+Serif+JP:wght@400;700&amp;display=swap"
+    rel="stylesheet" />
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            base: '#F5F5F3',
+            'text-main': '#1E1E1E',
+            'text-sub': '#3C3C3C',
+            border: '#E3E3E0',
+            'accent-a': '#B88B4A',
+            'accent-b': '#0E1A16',
+            'feedback-ok': '#1F7A5B',
+            'feedback-ng': '#B44A3C',
+          },
+          fontFamily: {
+            sans: ['Inter', 'Noto Sans JP', 'sans-serif'],
+            serif: ['Noto Serif JP', 'serif'],
+          },
+        },
+      },
+    };
+  </script>
+  <link rel="stylesheet" href="styles.css?v=20260405-3" />
+  <noscript>
+    <style>
+      #splash-screen {
+        display: none !important;
+      }
+
+      #site-shell {
+        opacity: 1 !important;
+      }
+
+      .reveal-ready {
+        opacity: 1 !important;
+        transform: none !important;
+      }
+    </style>
+  </noscript>
+  <script>
+    (function () {
+      const finishSplashFallback = () => {
+        const splashScreen = document.getElementById('splash-screen');
+
+        if (splashScreen) {
+          splashScreen.style.opacity = '0';
+          splashScreen.style.visibility = 'hidden';
+          splashScreen.style.pointerEvents = 'none';
+        }
+
+        try {
+          sessionStorage.setItem('splashSeen', 'true');
+        } catch (error) {
+          console.warn('sessionStorage is unavailable.');
+        }
+      };
+
+      window.__finishSplashFallback = finishSplashFallback;
+
+      document.addEventListener(
+        'DOMContentLoaded',
+        () => {
+          if (document.documentElement.classList.contains('splash-seen')) {
+            finishSplashFallback();
+            return;
+          }
+
+          window.setTimeout(finishSplashFallback, 1900);
+        },
+        { once: true }
+      );
+    })();
+  </script>
+  <script src="script.js?v=20260405-4" defer></script>
+</head>
+
+<body class="bg-base text-text-main font-sans">
+  <div id="splash-screen" class="opening-screen" aria-hidden="true">
+    <div class="opening-screen__glow"></div>
+    <div class="opening-screen__curtain opening-screen__curtain--top"></div>
+    <div class="opening-screen__curtain opening-screen__curtain--bottom"></div>
+    <div class="opening-screen__inner">
+      <span class="opening-screen__label">TOMINAGA TATEGU</span>
+      <div class="opening-screen__logo-wrap">
+        <img src="image/tategulogologow.svg" alt="富永建具 ロゴ" class="opening-screen__logo" onerror="this.remove();" />
+      </div>
+      <span class="opening-screen__line"></span>
+    </div>
+  </div>
+
+  <div id="site-shell" class="flex min-h-screen flex-col">
+    <header class="sticky top-0 z-50 border-b border-border bg-base/80 backdrop-blur-md">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex h-16 items-center justify-between">
+          <div class="flex-shrink-0">
+            <a href="index.html"
+              class="text-xl font-serif font-bold text-text-main transition-colors hover:text-accent-a">
+              富永建具
+            </a>
+          </div>
+
+          <nav class="hidden md:flex md:items-center md:space-x-8">
+            <a href="about.html"
+              class="relative text-sm font-medium text-text-sub transition-colors duration-300 hover:text-text-main after:absolute after:bottom-[-2px] after:left-0 after:h-[1px] after:w-0 after:bg-accent-a after:transition-all after:duration-300 after:content-[''] hover:after:w-full">
+              About
+            </a>
+            <a href="servicesv2.html"
+              class="relative text-sm font-medium text-text-main transition-colors duration-300 after:absolute after:bottom-[-2px] after:left-0 after:h-[1px] after:w-full after:bg-accent-a after:transition-all after:duration-300 after:content-['']">
+              services
+            </a>
+            <a href="contact.html"
+              class="relative text-sm font-medium text-text-sub transition-colors duration-300 hover:text-text-main after:absolute after:bottom-[-2px] after:left-0 after:h-[1px] after:w-0 after:bg-accent-a after:transition-all after:duration-300 after:content-[''] hover:after:w-full">
+              contact
+            </a>
+          </nav>
+
+          <div class="md:hidden">
+            <button
+              type="button"
+              data-menu-button
+              class="inline-flex items-center justify-center rounded-md p-2 text-text-sub focus:outline-none focus:ring-2 focus:ring-inset focus:ring-accent-a hover:text-text-main"
+              aria-controls="mobile-menu"
+              aria-expanded="false">
+              <span class="sr-only">Open main menu</span>
+              <svg data-menu-icon="open" class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none"
+                viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+              </svg>
+              <svg data-menu-icon="close" class="hidden h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none"
+                viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="hidden md:hidden" id="mobile-menu" data-mobile-menu>
+        <div class="space-y-1 px-2 pt-2 pb-3 sm:px-3">
+          <a href="about.html"
+            class="block rounded-md px-3 py-2 text-base font-medium text-text-sub hover:bg-border/60 hover:text-text-main">About</a>
+          <a href="servicesv2.html"
+            class="block rounded-md bg-border px-3 py-2 text-base font-medium text-text-main">services</a>
+          <a href="contact.html"
+            class="block rounded-md px-3 py-2 text-base font-medium text-text-sub hover:bg-border/60 hover:text-text-main">contact</a>
+        </div>
+      </div>
+    </header>
+
+    <main class="flex-grow">
+      <section class="border-b border-border bg-white">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20 lg:py-24">
+          <div class="grid items-center gap-12 lg:grid-cols-[1.05fr_0.95fr] lg:gap-16">
+            <div class="reveal-ready">
+              <p class="text-sm font-semibold uppercase tracking-[0.32em] text-accent-a">Services / Works</p>
+              <h1 class="mt-4 text-4xl font-serif font-bold leading-tight text-text-main sm:text-5xl lg:text-6xl">
+                図面対応から
+                オーダー製作まで。<br />
+                建具・什器・家具を、
+                用途に合わせて一貫対応。
+              </h1>
+              <p class="mt-6 max-w-2xl text-base leading-relaxed text-text-sub sm:text-lg">
+                法人案件の試作・量産・現場納まりから、個人のお客様の採寸・設置を伴う一点物製作まで。
+                富永建具は、依頼内容に応じて進め方を切り替えながら、設計・製作・施工を支えます。
+              </p>
+              <div class="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
+                <a href="#b2b-service"
+                  class="inline-flex items-center justify-center rounded-sm bg-accent-a px-7 py-3 text-sm font-medium text-white transition-all duration-300 hover:bg-opacity-90">
+                  法人案件の相談を見る
+                </a>
+                <a href="#b2c-service"
+                  class="inline-flex items-center justify-center rounded-sm border border-border bg-base px-7 py-3 text-sm font-medium text-text-main transition-colors duration-300 hover:border-accent-a hover:text-accent-a">
+                  個人向け製作を見る
+                </a>
+                <a href="#works-gallery"
+                  class="inline-flex items-center justify-center rounded-sm border border-transparent px-7 py-3 text-sm font-medium text-text-sub transition-colors duration-300 hover:text-text-main">
+                  事例紹介へ
+                </a>
+              </div>
+
+              <dl class="mt-10 grid gap-4 sm:grid-cols-3">
+                <div class="rounded-sm border border-border bg-base/70 p-4">
+                  <dt class="text-xs font-semibold uppercase tracking-[0.28em] text-accent-a">B2B</dt>
+                  <dd class="mt-2 text-sm leading-relaxed text-text-sub">図面レビューから試作、量産、現場調整まで。</dd>
+                </div>
+                <div class="rounded-sm border border-border bg-base/70 p-4">
+                  <dt class="text-xs font-semibold uppercase tracking-[0.28em] text-accent-a">B2C</dt>
+                  <dd class="mt-2 text-sm leading-relaxed text-text-sub">採寸、設計提案、設置までを見据えた一点物製作。</dd>
+                </div>
+                <div class="rounded-sm border border-border bg-base/70 p-4">
+                  <dt class="text-xs font-semibold uppercase tracking-[0.28em] text-accent-a">Scope</dt>
+                  <dd class="mt-2 text-sm leading-relaxed text-text-sub">建具・什器・家具を横断して相談できる体制。</dd>
+                </div>
+              </dl>
+            </div>
+
+            <div class="reveal-ready">
+              <div class="relative overflow-hidden rounded-sm bg-accent-b text-white shadow-[0_24px_80px_rgba(14,26,22,0.22)]">
+                <img src="image/servicesB2B.jpeg" alt="木製建築の外観"
+                  class="h-[28rem] w-full object-cover opacity-55 sm:h-[32rem] lg:h-[38rem]" />
+                <div class="absolute inset-0 bg-gradient-to-b from-accent-b/15 via-accent-b/30 to-accent-b"></div>
+                <div class="absolute inset-x-0 bottom-0 p-6 sm:p-8">
+                  <p class="text-xs font-semibold uppercase tracking-[0.32em] text-white/70">相談の入口</p>
+                  <div class="mt-4 grid gap-4 sm:grid-cols-2">
+                    <a href="#b2b-service"
+                      class="rounded-sm border border-white/20 bg-white/10 p-4 transition-colors duration-300 hover:bg-white/15">
+                      <p class="text-sm font-semibold text-white">法人のお客様へ</p>
+                      <p class="mt-2 text-sm leading-relaxed text-white/70">
+                        商業施設、オフィス、ホテルなどの案件進行を支える入口です。
+                      </p>
+                    </a>
+                    <a href="#b2c-service"
+                      class="rounded-sm border border-white/20 bg-white/10 p-4 transition-colors duration-300 hover:bg-white/15">
+                      <p class="text-sm font-semibold text-white">個人のお客様へ</p>
+                      <p class="mt-2 text-sm leading-relaxed text-white/70">
+                        暮らしに合わせた建具や家具を相談したい方向けの入口です。
+                      </p>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="bg-base">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-12">
+          <div class="reveal-ready grid gap-5 lg:grid-cols-2">
+            <article class="rounded-sm border border-border bg-white p-6 sm:p-8">
+              <p class="text-xs font-semibold uppercase tracking-[0.28em] text-accent-a">For B2B</p>
+              <h2 class="mt-3 text-2xl font-serif font-bold text-text-main">案件進行の精度を求める法人案件に</h2>
+              <ul class="mt-5 space-y-3 text-sm leading-relaxed text-text-sub">
+                <li>図面支給案件の製作方法を相談したい</li>
+                <li>試作やモックアップを経て量産へつなげたい</li>
+                <li>納まりや現場調整まで含めて進行したい</li>
+              </ul>
+              <a href="#b2b-service"
+                class="mt-6 inline-flex items-center text-sm font-medium text-text-main transition-colors hover:text-accent-a">
+                B2B の詳細を見る
+              </a>
+            </article>
+
+            <article class="rounded-sm border border-border bg-white p-6 sm:p-8">
+              <p class="text-xs font-semibold uppercase tracking-[0.28em] text-accent-a">For B2C</p>
+              <h2 class="mt-3 text-2xl font-serif font-bold text-text-main">暮らしに合わせて整えたい個人のご相談に</h2>
+              <ul class="mt-5 space-y-3 text-sm leading-relaxed text-text-sub">
+                <li>既製品では収まらない場所に合わせて作りたい</li>
+                <li>素材や使い勝手も含めて一緒に考えたい</li>
+                <li>採寸から設置までまとめて任せたい</li>
+              </ul>
+              <a href="#b2c-service"
+                class="mt-6 inline-flex items-center text-sm font-medium text-text-main transition-colors hover:text-accent-a">
+                B2C の詳細を見る
+              </a>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="b2b-service" class="border-y border-border bg-white">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24">
+          <div class="reveal-ready grid gap-14 lg:grid-cols-[0.92fr_1.08fr] lg:gap-16">
+            <div>
+              <img src="image/servicesB2B.jpeg" alt="法人案件向けの木製建築"
+                class="w-full rounded-sm object-cover shadow-[0_22px_80px_rgba(14,26,22,0.12)]" />
+              <div class="mt-6 grid gap-4 sm:grid-cols-2">
+                <div class="rounded-sm border border-border bg-base/70 p-4">
+                  <p class="text-xs font-semibold uppercase tracking-[0.24em] text-accent-a">対応領域</p>
+                  <p class="mt-2 text-sm leading-relaxed text-text-sub">商業施設、オフィス、ホテルなどの空間づくりに対応。</p>
+                </div>
+                <div class="rounded-sm border border-border bg-base/70 p-4">
+                  <p class="text-xs font-semibold uppercase tracking-[0.24em] text-accent-a">進め方</p>
+                  <p class="mt-2 text-sm leading-relaxed text-text-sub">図面確認、試作、量産、納品まで段階を揃えて進行。</p>
+                </div>
+              </div>
+            </div>
+
+            <div>
+              <p class="text-sm font-semibold text-accent-a">法人のお客様へ</p>
+              <h2 class="mt-2 text-3xl font-serif font-bold text-text-main sm:text-4xl">B2B: 施工・共同開発・量産</h2>
+              <p class="mt-6 text-base leading-relaxed text-text-sub">
+                設計事務所や工務店のパートナーとして、図面一枚から製作方法を整理し、
+                複雑な要求に応える試作や安定した品質での本製作につなげます。
+                製作だけでなく、現場での納まりまで見据えて進めたい案件に向いたサービスです。
+              </p>
+
+              <div class="mt-8 grid gap-4 sm:grid-cols-3">
+                <div class="rounded-sm border border-border p-4">
+                  <h3 class="text-sm font-semibold text-text-main">図面レビュー</h3>
+                  <p class="mt-2 text-sm leading-relaxed text-text-sub">意匠、機能、コストを見ながら製作方法を整理します。</p>
+                </div>
+                <div class="rounded-sm border border-border p-4">
+                  <h3 class="text-sm font-semibold text-text-main">試作・検証</h3>
+                  <p class="mt-2 text-sm leading-relaxed text-text-sub">必要に応じてモックアップをつくり、納まりを事前に確認します。</p>
+                </div>
+                <div class="rounded-sm border border-border p-4">
+                  <h3 class="text-sm font-semibold text-text-main">本製作・納品</h3>
+                  <p class="mt-2 text-sm leading-relaxed text-text-sub">品質を揃えた製作と、現場調整を含む納品を支えます。</p>
+                </div>
+              </div>
+
+              <div class="mt-10 grid gap-8 lg:grid-cols-[0.85fr_1.15fr]">
+                <div>
+                  <h3 class="text-lg font-semibold text-text-main">こんなご相談に向いています</h3>
+                  <ul class="mt-4 space-y-3 text-sm leading-relaxed text-text-sub">
+                    <li>特注建具や什器の納まりを早い段階で詰めたい</li>
+                    <li>試作を挟みながら仕様決定を進めたい</li>
+                    <li>本製作と現場調整を分断せずに進行したい</li>
+                  </ul>
+                </div>
+
+                <div class="rounded-sm border border-border bg-base/70 p-6">
+                  <h3 class="text-xl font-semibold text-text-main">製作の流れ</h3>
+                  <ol class="mt-6 space-y-5">
+                    <li class="flex">
+                      <span
+                        class="mr-4 flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full bg-accent-a font-bold text-white">1</span>
+                      <div>
+                        <h4 class="font-semibold text-text-main">ご相談・図面レビュー</h4>
+                        <p class="mt-1 text-sm text-text-sub">設計図を基に、意匠・機能・コストを踏まえて製作方法を整理します。</p>
+                      </div>
+                    </li>
+                    <li class="flex">
+                      <span
+                        class="mr-4 flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full bg-accent-a font-bold text-white">2</span>
+                      <div>
+                        <h4 class="font-semibold text-text-main">試作・モックアップ製作</h4>
+                        <p class="mt-1 text-sm text-text-sub">必要に応じて試作品を製作し、質感や納まりを実物で確認します。</p>
+                      </div>
+                    </li>
+                    <li class="flex">
+                      <span
+                        class="mr-4 flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full bg-accent-a font-bold text-white">3</span>
+                      <div>
+                        <h4 class="font-semibold text-text-main">量産・本製作</h4>
+                        <p class="mt-1 text-sm text-text-sub">承認後、自社で品質を揃えながら本製作へ進みます。</p>
+                      </div>
+                    </li>
+                    <li class="flex">
+                      <span
+                        class="mr-4 flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full bg-accent-a font-bold text-white">4</span>
+                      <div>
+                        <h4 class="font-semibold text-text-main">現場調整・納品</h4>
+                        <p class="mt-1 text-sm text-text-sub">施工や調整まで含め、納品時の収まりを見据えて対応します。</p>
+                      </div>
+                    </li>
+                  </ol>
+                </div>
+              </div>
+
+              <div class="mt-10 flex flex-col gap-3 sm:flex-row">
+                <a href="contact.html"
+                  class="inline-flex items-center justify-center rounded-sm bg-accent-a px-8 py-3 text-sm font-medium text-white transition-all duration-300 hover:bg-opacity-90">
+                  図面や案件内容を相談する
+                </a>
+                <a href="#works-gallery"
+                  class="inline-flex items-center justify-center rounded-sm border border-border px-8 py-3 text-sm font-medium text-text-main transition-colors duration-300 hover:border-accent-a hover:text-accent-a">
+                  B2B の事例を見る
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="b2c-service" class="bg-base">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24">
+          <div class="reveal-ready grid gap-14 lg:grid-cols-[1.05fr_0.95fr] lg:gap-16">
+            <div>
+              <p class="text-sm font-semibold text-accent-a">個人のお客様へ</p>
+              <h2 class="mt-2 text-3xl font-serif font-bold text-text-main sm:text-4xl">B2C: 暮らしに合わせるオーダーメイド製作</h2>
+              <p class="mt-6 text-base leading-relaxed text-text-sub">
+                「ここにちょうど収まる家具がほしい」「この空間に合う建具にしたい」。
+                そんなご相談に対して、理想のイメージ、ライフスタイル、ご予算を伺いながら、
+                採寸、設計提案、製作、設置までを見据えて一品ごとに進めます。
+              </p>
+
+              <div class="mt-8 grid gap-4 sm:grid-cols-3">
+                <div class="rounded-sm border border-border bg-white p-4">
+                  <h3 class="text-sm font-semibold text-text-main">採寸前提の提案</h3>
+                  <p class="mt-2 text-sm leading-relaxed text-text-sub">設置場所の寸法や動線を踏まえて形を決めます。</p>
+                </div>
+                <div class="rounded-sm border border-border bg-white p-4">
+                  <h3 class="text-sm font-semibold text-text-main">素材と使い勝手</h3>
+                  <p class="mt-2 text-sm leading-relaxed text-text-sub">見た目だけでなく、暮らしの中での使いやすさを整えます。</p>
+                </div>
+                <div class="rounded-sm border border-border bg-white p-4">
+                  <h3 class="text-sm font-semibold text-text-main">設置まで想定</h3>
+                  <p class="mt-2 text-sm leading-relaxed text-text-sub">完成品として置くだけでなく、納まりまで意識して進めます。</p>
+                </div>
+              </div>
+
+              <div class="mt-10 grid gap-8 lg:grid-cols-[0.85fr_1.15fr]">
+                <div>
+                  <h3 class="text-lg font-semibold text-text-main">こんなご相談に向いています</h3>
+                  <ul class="mt-4 space-y-3 text-sm leading-relaxed text-text-sub">
+                    <li>既製品ではサイズも雰囲気も合わない</li>
+                    <li>建具と家具を空間全体で揃えたい</li>
+                    <li>ヒアリングから設置までまとめて進めたい</li>
+                  </ul>
+                </div>
+
+                <div class="rounded-sm border border-border bg-white p-6">
+                  <h3 class="text-xl font-semibold text-text-main">製作の流れ</h3>
+                  <ol class="mt-6 space-y-5">
+                    <li class="flex">
+                      <span
+                        class="mr-4 flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full bg-accent-a font-bold text-white">1</span>
+                      <div>
+                        <h4 class="font-semibold text-text-main">ご相談・ヒアリング</h4>
+                        <p class="mt-1 text-sm text-text-sub">理想のイメージ、暮らし方、ご予算を丁寧に伺います。</p>
+                      </div>
+                    </li>
+                    <li class="flex">
+                      <span
+                        class="mr-4 flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full bg-accent-a font-bold text-white">2</span>
+                      <div>
+                        <h4 class="font-semibold text-text-main">現地調査・採寸</h4>
+                        <p class="mt-1 text-sm text-text-sub">設置場所を確認し、必要な寸法を正確に計測します。</p>
+                      </div>
+                    </li>
+                    <li class="flex">
+                      <span
+                        class="mr-4 flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full bg-accent-a font-bold text-white">3</span>
+                      <div>
+                        <h4 class="font-semibold text-text-main">設計・お見積り</h4>
+                        <p class="mt-1 text-sm text-text-sub">採寸結果を踏まえて、形や素材の提案と見積りをまとめます。</p>
+                      </div>
+                    </li>
+                    <li class="flex">
+                      <span
+                        class="mr-4 flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full bg-accent-a font-bold text-white">4</span>
+                      <div>
+                        <h4 class="font-semibold text-text-main">製作・納品</h4>
+                        <p class="mt-1 text-sm text-text-sub">内容確定後に製作し、設置を想定した納品へつなげます。</p>
+                      </div>
+                    </li>
+                  </ol>
+                </div>
+              </div>
+
+              <div class="mt-10 flex flex-col gap-3 sm:flex-row">
+                <a href="contact.html"
+                  class="inline-flex items-center justify-center rounded-sm bg-accent-a px-8 py-3 text-sm font-medium text-white transition-all duration-300 hover:bg-opacity-90">
+                  家具や建具の相談をする
+                </a>
+                <a href="#works-gallery"
+                  class="inline-flex items-center justify-center rounded-sm border border-border px-8 py-3 text-sm font-medium text-text-main transition-colors duration-300 hover:border-accent-a hover:text-accent-a">
+                  B2C の事例を見る
+                </a>
+              </div>
+            </div>
+
+            <div>
+              <img src="image/servicesB2C.jpeg" alt="オーダーメイド家具の事例"
+                class="w-full rounded-sm object-cover shadow-[0_22px_80px_rgba(14,26,22,0.12)]" />
+              <div class="mt-6 grid gap-4 sm:grid-cols-2">
+                <div class="rounded-sm border border-border bg-white p-4">
+                  <p class="text-xs font-semibold uppercase tracking-[0.24em] text-accent-a">相談内容</p>
+                  <p class="mt-2 text-sm leading-relaxed text-text-sub">ドア一枚から造作家具まで、空間に合わせて相談可能です。</p>
+                </div>
+                <div class="rounded-sm border border-border bg-white p-4">
+                  <p class="text-xs font-semibold uppercase tracking-[0.24em] text-accent-a">納品イメージ</p>
+                  <p class="mt-2 text-sm leading-relaxed text-text-sub">採寸結果と暮らし方を反映した、収まりの良い仕上がりを目指します。</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="bg-accent-b text-white">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
+          <div class="reveal-ready">
+            <div class="max-w-3xl">
+              <p class="text-sm font-semibold uppercase tracking-[0.32em] text-accent-a">How We Work</p>
+              <h2 class="mt-3 text-3xl font-serif font-bold text-white sm:text-4xl">依頼内容に合わせて、進め方を組み替えること。</h2>
+              <p class="mt-5 text-base leading-relaxed text-white/70">
+                同じ建具や家具でも、法人案件と個人のご相談では重視すべき点が異なります。
+                富永建具では、図面、採寸、試作、納まりの確認といった工程を、用途に合わせて整えながら進行します。
+              </p>
+            </div>
+
+            <div class="mt-10 grid gap-4 md:grid-cols-2 xl:grid-cols-4">
+              <article class="rounded-sm border border-white/10 bg-white/5 p-5">
+                <h3 class="text-sm font-semibold text-white">図面と現場を分けない</h3>
+                <p class="mt-3 text-sm leading-relaxed text-white/70">
+                  机上の仕様だけで終わらせず、現場での納まりまで見据えて整理します。
+                </p>
+              </article>
+              <article class="rounded-sm border border-white/10 bg-white/5 p-5">
+                <h3 class="text-sm font-semibold text-white">一点物にも量産にも対応</h3>
+                <p class="mt-3 text-sm leading-relaxed text-white/70">
+                  オーダーメイドと本製作の両方に応じた進行をページ内で明確に分けています。
+                </p>
+              </article>
+              <article class="rounded-sm border border-white/10 bg-white/5 p-5">
+                <h3 class="text-sm font-semibold text-white">素材と使い勝手を両立</h3>
+                <p class="mt-3 text-sm leading-relaxed text-white/70">
+                  見た目だけでなく、使う場所、触れる頻度、設置方法まで考慮して提案します。
+                </p>
+              </article>
+              <article class="rounded-sm border border-white/10 bg-white/5 p-5">
+                <h3 class="text-sm font-semibold text-white">相談の着地点を明確に</h3>
+                <p class="mt-3 text-sm leading-relaxed text-white/70">
+                  B2B / B2C で導線を分け、問い合わせ時に必要な情報が伝わりやすい構成にしています。
+                </p>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="border-b border-border bg-white">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24">
+          <div class="reveal-ready">
+            <div class="flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
+              <div class="max-w-3xl">
+                <p class="text-sm font-semibold uppercase tracking-[0.32em] text-accent-a">Featured Cases</p>
+                <h2 class="mt-2 text-3xl font-serif font-bold text-text-main sm:text-4xl">まず見てほしい3つの事例</h2>
+                <p class="mt-4 text-base leading-relaxed text-text-sub">
+                  単に写真を並べるのではなく、どんな相談に対して、どこまで対応したのかが伝わる見せ方へ整理しています。
+                </p>
+              </div>
+              <a href="#works-gallery"
+                class="inline-flex items-center text-sm font-medium text-text-main transition-colors hover:text-accent-a">
+                すべての事例を見る
+              </a>
+            </div>
+
+            <div class="mt-10 grid gap-8 lg:grid-cols-3">
+              <article class="overflow-hidden rounded-sm border border-border bg-base/70">
+                <img src="image/servicesB2B.jpeg" alt="木製外装と建具の事例" class="aspect-[4/3] w-full object-cover" />
+                <div class="p-6">
+                  <div class="flex flex-wrap gap-2 text-xs">
+                    <span class="rounded-full bg-white px-3 py-1 text-text-main">建具</span>
+                    <span class="rounded-full bg-white px-3 py-1 text-text-main">B2B</span>
+                    <span class="rounded-full bg-white px-3 py-1 text-text-main">徳島県</span>
+                  </div>
+                  <h3 class="mt-4 text-xl font-semibold text-text-main">施設計画に合わせた木製建具の調整</h3>
+                  <p class="mt-3 text-sm leading-relaxed text-text-sub">
+                    外観と内部の印象をつなげながら、開口部の見え方と使い勝手の両立を意識して進めた法人案件のイメージです。
+                  </p>
+                  <dl class="mt-5 space-y-3 text-sm">
+                    <div class="grid grid-cols-[4rem_1fr] gap-3">
+                      <dt class="text-text-sub">相談</dt>
+                      <dd class="text-text-main">施設計画に合わせた建具製作</dd>
+                    </div>
+                    <div class="grid grid-cols-[4rem_1fr] gap-3">
+                      <dt class="text-text-sub">対応</dt>
+                      <dd class="text-text-main">図面確認 / 製作 / 現場調整</dd>
+                    </div>
+                  </dl>
+                </div>
+              </article>
+
+              <article class="overflow-hidden rounded-sm border border-border bg-base/70">
+                <img src="image/servicesimg.jpeg" alt="木製窓辺と造作ベンチの事例" class="aspect-[4/3] w-full object-cover" />
+                <div class="p-6">
+                  <div class="flex flex-wrap gap-2 text-xs">
+                    <span class="rounded-full bg-white px-3 py-1 text-text-main">建具</span>
+                    <span class="rounded-full bg-white px-3 py-1 text-text-main">B2C</span>
+                    <span class="rounded-full bg-white px-3 py-1 text-text-main">徳島県</span>
+                  </div>
+                  <h3 class="mt-4 text-xl font-semibold text-text-main">空間の雰囲気に合わせた木製サッシと造作</h3>
+                  <p class="mt-3 text-sm leading-relaxed text-text-sub">
+                    眺望を活かしながら、窓まわりと居場所をひとつの空間として設計していく個人向け製作のイメージです。
+                  </p>
+                  <dl class="mt-5 space-y-3 text-sm">
+                    <div class="grid grid-cols-[4rem_1fr] gap-3">
+                      <dt class="text-text-sub">相談</dt>
+                      <dd class="text-text-main">窓辺を中心にした造作提案</dd>
+                    </div>
+                    <div class="grid grid-cols-[4rem_1fr] gap-3">
+                      <dt class="text-text-sub">対応</dt>
+                      <dd class="text-text-main">ヒアリング / 採寸 / 製作 / 設置</dd>
+                    </div>
+                  </dl>
+                </div>
+              </article>
+
+              <article class="overflow-hidden rounded-sm border border-border bg-base/70">
+                <img src="image/servicesB2C.jpeg" alt="テレビボードの事例" class="aspect-[4/3] w-full object-cover" />
+                <div class="p-6">
+                  <div class="flex flex-wrap gap-2 text-xs">
+                    <span class="rounded-full bg-white px-3 py-1 text-text-main">家具</span>
+                    <span class="rounded-full bg-white px-3 py-1 text-text-main">B2C</span>
+                    <span class="rounded-full bg-white px-3 py-1 text-text-main">徳島県</span>
+                  </div>
+                  <h3 class="mt-4 text-xl font-semibold text-text-main">使い方に合わせて整えるオーダー家具</h3>
+                  <p class="mt-3 text-sm leading-relaxed text-text-sub">
+                    収納量、配線、見え方をバランスさせながら、暮らしに合わせて形を決める家具製作のイメージです。
+                  </p>
+                  <dl class="mt-5 space-y-3 text-sm">
+                    <div class="grid grid-cols-[4rem_1fr] gap-3">
+                      <dt class="text-text-sub">相談</dt>
+                      <dd class="text-text-main">サイズと使い方に合うTVボード</dd>
+                    </div>
+                    <div class="grid grid-cols-[4rem_1fr] gap-3">
+                      <dt class="text-text-sub">対応</dt>
+                      <dd class="text-text-main">採寸 / 素材提案 / 製作 / 納品</dd>
+                    </div>
+                  </dl>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="works-gallery" class="bg-base">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24">
+          <div class="reveal-ready">
+            <div class="text-center">
+              <p class="text-sm font-semibold uppercase tracking-[0.32em] text-accent-a">All Works</p>
+              <h2 class="mt-2 text-3xl font-serif font-bold text-text-main sm:text-4xl">事例を条件ごとに見る</h2>
+              <p class="mt-4 mx-auto max-w-2xl text-base leading-relaxed text-text-sub">
+                建具、什器、家具、店舗、住宅の5分類から、相談内容に近い事例を探せるようにしています。
+              </p>
+            </div>
+
+            <div class="sticky top-16 z-10 mt-10 border-y border-border bg-base/95 py-4 backdrop-blur-sm" data-works-filters>
+              <div class="flex flex-col gap-4 sm:flex-row sm:flex-wrap sm:items-center sm:justify-between">
+                <div class="flex flex-wrap items-center gap-2">
+                  <span class="mr-1 text-sm font-semibold text-text-main">カテゴリ</span>
+                  <button type="button" data-filter-group="category" data-filter-value="すべて"
+                    class="relative rounded-full border border-border bg-white px-4 py-2 text-sm font-medium text-text-main transition-colors duration-200 after:absolute after:bottom-[-2px] after:left-0 after:h-[2px] after:w-full after:bg-accent-a after:transition-all after:duration-300 after:content-[''] hover:after:w-full">
+                    すべて
+                  </button>
+                  <button type="button" data-filter-group="category" data-filter-value="建具"
+                    class="relative rounded-full border border-border bg-white px-4 py-2 text-sm font-medium text-text-sub transition-colors duration-200 hover:text-text-main after:absolute after:bottom-[-2px] after:left-0 after:h-[2px] after:w-0 after:bg-accent-a after:transition-all after:duration-300 after:content-[''] hover:after:w-full">
+                    建具
+                  </button>
+                  <button type="button" data-filter-group="category" data-filter-value="什器"
+                    class="relative rounded-full border border-border bg-white px-4 py-2 text-sm font-medium text-text-sub transition-colors duration-200 hover:text-text-main after:absolute after:bottom-[-2px] after:left-0 after:h-[2px] after:w-0 after:bg-accent-a after:transition-all after:duration-300 after:content-[''] hover:after:w-full">
+                    什器
+                  </button>
+                  <button type="button" data-filter-group="category" data-filter-value="家具"
+                    class="relative rounded-full border border-border bg-white px-4 py-2 text-sm font-medium text-text-sub transition-colors duration-200 hover:text-text-main after:absolute after:bottom-[-2px] after:left-0 after:h-[2px] after:w-0 after:bg-accent-a after:transition-all after:duration-300 after:content-[''] hover:after:w-full">
+                    家具
+                  </button>
+                  <button type="button" data-filter-group="category" data-filter-value="店舗"
+                    class="relative rounded-full border border-border bg-white px-4 py-2 text-sm font-medium text-text-sub transition-colors duration-200 hover:text-text-main after:absolute after:bottom-[-2px] after:left-0 after:h-[2px] after:w-0 after:bg-accent-a after:transition-all after:duration-300 after:content-[''] hover:after:w-full">
+                    店舗
+                  </button>
+                  <button type="button" data-filter-group="category" data-filter-value="住宅"
+                    class="relative rounded-full border border-border bg-white px-4 py-2 text-sm font-medium text-text-sub transition-colors duration-200 hover:text-text-main after:absolute after:bottom-[-2px] after:left-0 after:h-[2px] after:w-0 after:bg-accent-a after:transition-all after:duration-300 after:content-[''] hover:after:w-full">
+                    住宅
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="mt-10 grid gap-8 md:grid-cols-2 xl:grid-cols-3" data-works-grid>
+              <article data-work-card data-category="建具"
+                class="group flex h-full flex-col overflow-hidden rounded-sm border border-border bg-white">
+                <div class="relative aspect-[4/3] overflow-hidden bg-border">
+                  <img src="image/servicesB2B.jpeg" alt="木製ファサード建具"
+                    class="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" />
+                </div>
+                <div class="flex flex-1 flex-col p-6">
+                  <div class="flex flex-wrap gap-2 text-xs">
+                    <span class="rounded-full bg-base px-3 py-1 text-text-main">建具</span>
+                    <span class="rounded-full bg-base px-3 py-1 text-text-main">徳島県</span>
+                  </div>
+                  <h3 class="mt-4 text-xl font-semibold text-text-main transition-colors group-hover:text-accent-a">
+                    木製サッシとファサード建具
+                  </h3>
+                  <p class="mt-3 text-sm leading-relaxed text-text-sub">
+                    建築全体の印象を保ちながら、外観から内部へのつながりを意識して調整した建具のイメージです。
+                  </p>
+                  <dl class="mt-5 space-y-3 text-sm">
+                    <div class="grid grid-cols-[4rem_1fr] gap-3">
+                      <dt class="text-text-sub">相談</dt>
+                      <dd class="text-text-main">施設開口部の建具製作</dd>
+                    </div>
+                    <div class="grid grid-cols-[4rem_1fr] gap-3">
+                      <dt class="text-text-sub">対応</dt>
+                      <dd class="text-text-main">図面確認 / 製作 / 納品調整</dd>
+                    </div>
+                  </dl>
+                </div>
+              </article>
+
+              <article data-work-card data-category="住宅"
+                class="group flex h-full flex-col overflow-hidden rounded-sm border border-border bg-white">
+                <div class="relative aspect-[4/3] overflow-hidden bg-border">
+                  <img src="image/servicesimg.jpeg" alt="木製窓と造作ベンチ"
+                    class="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy" />
+                </div>
+                <div class="flex flex-1 flex-col p-6">
+                  <div class="flex flex-wrap gap-2 text-xs">
+                    <span class="rounded-full bg-base px-3 py-1 text-text-main">住宅</span>
+                    <span class="rounded-full bg-base px-3 py-1 text-text-main">徳島県</span>
+                  </div>
+                  <h3 class="mt-4 text-xl font-semibold text-text-main transition-colors group-hover:text-accent-a">
+                    窓辺の造作ベンチと木製建具
+                  </h3>
+                  <p class="mt-3 text-sm leading-relaxed text-text-sub">
+                    採光と眺望を活かしながら、居場所としての窓辺を整える住宅向け製作のイメージです。
+                  </p>
+                  <dl class="mt-5 space-y-3 text-sm">
+                    <div class="grid grid-cols-[4rem_1fr] gap-3">
+                      <dt class="text-text-sub">相談</dt>
+                      <dd class="text-text-main">窓まわりと居場所を一体で整えたい</dd>
+                    </div>
+                    <div class="grid grid-cols-[4rem_1fr] gap-3">
+                      <dt class="text-text-sub">対応</dt>
+                      <dd class="text-text-main">ヒアリング / 採寸 / 製作 / 設置</dd>
+                    </div>
+                  </dl>
+                </div>
+              </article>
+
+              <article data-work-card data-category="家具"
+                class="group flex h-full flex-col overflow-hidden rounded-sm border border-border bg-white">
+                <div class="relative aspect-[4/3] overflow-hidden bg-border">
+                  <img src="image/servicesB2C.jpeg" alt="TVボードの製作事例"
+                    class="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy" />
+                </div>
+                <div class="flex flex-1 flex-col p-6">
+                  <div class="flex flex-wrap gap-2 text-xs">
+                    <span class="rounded-full bg-base px-3 py-1 text-text-main">家具</span>
+                    <span class="rounded-full bg-base px-3 py-1 text-text-main">徳島県</span>
+                  </div>
+                  <h3 class="mt-4 text-xl font-semibold text-text-main transition-colors group-hover:text-accent-a">
+                    暮らしに合わせたTVボード
+                  </h3>
+                  <p class="mt-3 text-sm leading-relaxed text-text-sub">
+                    収納、配線、色使いを整理しながら、設置場所に合うサイズ感でつくる家具のイメージです。
+                  </p>
+                  <dl class="mt-5 space-y-3 text-sm">
+                    <div class="grid grid-cols-[4rem_1fr] gap-3">
+                      <dt class="text-text-sub">相談</dt>
+                      <dd class="text-text-main">部屋に収まるTV台をつくりたい</dd>
+                    </div>
+                    <div class="grid grid-cols-[4rem_1fr] gap-3">
+                      <dt class="text-text-sub">対応</dt>
+                      <dd class="text-text-main">採寸 / 素材提案 / 製作 / 納品</dd>
+                    </div>
+                  </dl>
+                </div>
+              </article>
+
+              <article data-work-card data-category="什器"
+                class="group flex h-full flex-col overflow-hidden rounded-sm border border-border bg-white">
+                <div class="relative aspect-[4/3] overflow-hidden bg-border">
+                  <img src="image/img2.jpg" alt="工場外観のイメージ"
+                    class="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy" />
+                </div>
+                <div class="flex flex-1 flex-col p-6">
+                  <div class="flex flex-wrap gap-2 text-xs">
+                    <span class="rounded-full bg-base px-3 py-1 text-text-main">什器</span>
+                    <span class="rounded-full bg-base px-3 py-1 text-text-main">近県案件</span>
+                  </div>
+                  <h3 class="mt-4 text-xl font-semibold text-text-main transition-colors group-hover:text-accent-a">
+                    空間計画に合わせた特注什器
+                  </h3>
+                  <p class="mt-3 text-sm leading-relaxed text-text-sub">
+                    デザイン意図と現場条件をすり合わせながら、使用環境に合わせて収まりを整える什器製作のイメージです。
+                  </p>
+                  <dl class="mt-5 space-y-3 text-sm">
+                    <div class="grid grid-cols-[4rem_1fr] gap-3">
+                      <dt class="text-text-sub">相談</dt>
+                      <dd class="text-text-main">什器の仕様整理と製作進行</dd>
+                    </div>
+                    <div class="grid grid-cols-[4rem_1fr] gap-3">
+                      <dt class="text-text-sub">対応</dt>
+                      <dd class="text-text-main">レビュー / 試作検討 / 本製作</dd>
+                    </div>
+                  </dl>
+                </div>
+              </article>
+
+              <article data-work-card data-category="店舗"
+                class="group flex h-full flex-col overflow-hidden rounded-sm border border-border bg-white">
+                <div class="relative aspect-[4/3] overflow-hidden bg-border">
+                  <img src="image/img3.jpg" alt="工場周辺の風景"
+                    class="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy" />
+                </div>
+                <div class="flex flex-1 flex-col p-6">
+                  <div class="flex flex-wrap gap-2 text-xs">
+                    <span class="rounded-full bg-base px-3 py-1 text-text-main">店舗</span>
+                    <span class="rounded-full bg-base px-3 py-1 text-text-main">徳島県</span>
+                  </div>
+                  <h3 class="mt-4 text-xl font-semibold text-text-main transition-colors group-hover:text-accent-a">
+                    店舗空間に合わせた木製建具の納まり調整
+                  </h3>
+                  <p class="mt-3 text-sm leading-relaxed text-text-sub">
+                    店舗空間の印象と使い勝手を両立させるため、製作段階から納品時の収まりまで意識して進めるイメージです。
+                  </p>
+                  <dl class="mt-5 space-y-3 text-sm">
+                    <div class="grid grid-cols-[4rem_1fr] gap-3">
+                      <dt class="text-text-sub">相談</dt>
+                      <dd class="text-text-main">店舗建具の仕様整理と納品段取り</dd>
+                    </div>
+                    <div class="grid grid-cols-[4rem_1fr] gap-3">
+                      <dt class="text-text-sub">対応</dt>
+                      <dd class="text-text-main">図面整理 / 製作 / 現場調整</dd>
+                    </div>
+                  </dl>
+                </div>
+              </article>
+
+              <article data-work-card data-category="住宅"
+                class="group flex h-full flex-col overflow-hidden rounded-sm border border-border bg-white">
+                <div class="relative aspect-[4/3] overflow-hidden bg-border">
+                  <img src="image/servicesimg.jpeg" alt="木製室内空間"
+                    class="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy" />
+                </div>
+                <div class="flex flex-1 flex-col p-6">
+                  <div class="flex flex-wrap gap-2 text-xs">
+                    <span class="rounded-full bg-base px-3 py-1 text-text-main">住宅</span>
+                    <span class="rounded-full bg-base px-3 py-1 text-text-main">徳島県</span>
+                  </div>
+                  <h3 class="mt-4 text-xl font-semibold text-text-main transition-colors group-hover:text-accent-a">
+                    木の質感を活かした住宅造作
+                  </h3>
+                  <p class="mt-3 text-sm leading-relaxed text-text-sub">
+                    空間全体のトーンを壊さず、住宅の中で日常的に使う造作としての納まりと使いやすさを整えるイメージです。
+                  </p>
+                  <dl class="mt-5 space-y-3 text-sm">
+                    <div class="grid grid-cols-[4rem_1fr] gap-3">
+                      <dt class="text-text-sub">相談</dt>
+                      <dd class="text-text-main">部屋に合わせた一品物の家具</dd>
+                    </div>
+                    <div class="grid grid-cols-[4rem_1fr] gap-3">
+                      <dt class="text-text-sub">対応</dt>
+                      <dd class="text-text-main">相談 / 採寸 / 設計提案 / 製作</dd>
+                    </div>
+                  </dl>
+                </div>
+              </article>
+            </div>
+
+            <p class="hidden py-12 text-center text-text-sub" data-works-empty>
+              該当する事例が見つかりませんでした。
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="border-t border-border bg-white">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
+          <div class="reveal-ready rounded-sm border border-border bg-base/70 px-6 py-10 text-center sm:px-10">
+            <p class="text-sm font-semibold uppercase tracking-[0.32em] text-accent-a">Contact</p>
+            <h2 class="mt-3 text-3xl font-serif font-bold text-text-main">相談内容が固まりきっていなくても構いません。</h2>
+            <p class="mx-auto mt-4 max-w-2xl text-base leading-relaxed text-text-sub">
+              図面の有無、現場の状況、つくりたいもののイメージに応じて、必要な進め方を一緒に整理します。
+            </p>
+            <div class="mt-8 flex flex-col justify-center gap-3 sm:flex-row">
+              <a href="contact.html"
+                class="inline-flex items-center justify-center rounded-sm bg-accent-a px-8 py-3 text-sm font-medium text-white transition-all duration-300 hover:bg-opacity-90">
+                問い合わせる
+              </a>
+              <a href="about.html"
+                class="inline-flex items-center justify-center rounded-sm border border-border px-8 py-3 text-sm font-medium text-text-main transition-colors duration-300 hover:border-accent-a hover:text-accent-a">
+                会社紹介を見る
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="border-t border-border bg-accent-b text-base">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div class="grid grid-cols-1 gap-8 md:grid-cols-3">
+          <div class="md:col-span-2">
+            <h3 class="text-2xl font-serif font-bold text-base">富永建具</h3>
+            <p class="mt-2 text-sm text-gray-400">
+              〒779-1102 徳島県阿南市羽ノ浦町宮倉芝生13-7<br />
+              TEL: 0884-44-2369 (受付時間: 平日 9:00-17:00)<br />
+              MAIL: tominaga@chive.ocn.ne.jp
+            </p>
+            <div class="mt-4 flex space-x-4">
+              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer"
+                class="text-gray-400 transition-colors hover:text-base">
+                <span class="sr-only">Instagram</span>
+                <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path fill-rule="evenodd"
+                    d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.024.06 1.378.06 3.808s-.012 2.784-.06 3.808c-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.024.048-1.378.06-3.808.06s-2.784-.012-3.808-.06c-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.048-1.024-.06-1.378-.06-3.808s.012-2.784.06-3.808c.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 016.345 2.525c.636-.247 1.363-.416 2.427-.465C9.792 2.013 10.146 2 12.315 2zm-1.161 1.545a3.837 3.837 0 00-3.37 3.37c-.045 1.002-.058 1.334-.058 3.59s.013 2.588.058 3.59a3.837 3.837 0 003.37 3.37c1.002.045 1.334.058 3.59.058s2.588-.013 3.59-.058a3.837 3.837 0 003.37-3.37c.045-1.002.058-1.334.058-3.59s-.013-2.588-.058-3.59a3.837 3.837 0 00-3.37-3.37c-1.002-.045-1.334-.058-3.59-.058s-2.588.013-3.59.058zM12 8.25a3.75 3.75 0 100 7.5 3.75 3.75 0 000-7.5zM12 14a2 2 0 110-4 2 2 0 010 4zm4-7.5a1 1 0 100-2 1 1 0 000 2z"
+                    clip-rule="evenodd" />
+                </svg>
+              </a>
+            </div>
+          </div>
+          <div>
+            <h4 class="text-sm font-semibold uppercase tracking-wider text-gray-300">サイトマップ</h4>
+            <ul class="mt-4 space-y-2">
+              <li><a href="about.html" class="text-sm text-gray-400 transition-colors hover:text-base">会社紹介</a></li>
+              <li><a href="servicesv2.html" class="text-sm text-gray-400 transition-colors hover:text-base">事業紹介</a></li>
+              <li><a href="contact.html" class="text-sm text-gray-400 transition-colors hover:text-base">問い合わせ</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="mt-8 border-t border-gray-700 pt-8 text-center">
+          <p class="text-sm text-gray-500">&copy; <span data-current-year></span> Tominaga Tategu. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+  </div>
+</body>
+
+</html>
