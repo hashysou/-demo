@@ -6,17 +6,18 @@
 
 - `index.html`: トップページ
 - `about.html`: 会社紹介
-- `services.html`: 事業・事例紹介
+- `services.html`: 事業紹介
+- `works.html`: 事例紹介
 - `contact.html`: 問い合わせ
 - `styles.css`: レイアウトとデザイン
 - `script.js`: スライダー、フィルタ、モバイルメニュー、スクロール演出
 
 ## Run Locally
 
-**Prerequisites:** Node.js
+`index.html` をブラウザで開くか、任意の静的HTTPサーバーでこのディレクトリを配信してください。
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+例:
+
+```bash
+python3 -m http.server 8000
+```
