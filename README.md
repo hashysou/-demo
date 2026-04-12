@@ -1,20 +1,30 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+# Tominaga Tategu Static Site
 
-# Run and deploy your AI Studio app
+富永建具のコーポレートサイトを、`html / css / js` の静的構成へ変換した版です。
 
-This contains everything you need to run your app locally.
+## Files
 
-View your app in AI Studio: https://ai.studio/apps/drive/1_6IK6IyhivgdLaEbF3qfexVFJMwWOIMw
+- `index.html`: トップページ
+- `about.html`: 会社紹介
+- `services.html`: 事業・事例紹介
+- `contact.html`: 問い合わせ
+- `styles.css`: レイアウトとデザイン
+- `script.js`: スライダー、フィルタ、モバイルメニュー、スクロール演出
 
 ## Run Locally
 
-**Prerequisites:**  Node.js
+方法は2つあります。
 
+1. `index.html` から各HTMLをブラウザで開く
+2. `vite` を使って確認する
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+```bash
+npm install
+npm run dev
+```
+
+## Build
+
+```bash
+npm run build
+```

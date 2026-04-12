@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="富永建具のB2B / B2Cサービスを紹介しています。法人案件の試作・量産から個人向けオーダーメイド製作まで対応します。" />
+  <title>事業紹介｜Tominaga Tategu</title>
+  <script>
+    document.documentElement.classList.add('js-enabled');
+    try {
+      if (sessionStorage.getItem('splashSeen')) {
+        document.documentElement.classList.add('splash-seen');
+      }
+    } catch (error) {
+      console.warn('sessionStorage is unavailable.');
+    }
+  </script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@400;700&display=swap"
+    rel="stylesheet" />
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            base: '#F5F5F3',
+            'text-main': '#1E1E1E',
+            'text-sub': '#3C3C3C',
+            border: '#E3E3E0',
+            'accent-a': '#B88B4A',
+            'accent-b': '#0E1A16',
+            'feedback-ok': '#1F7A5B',
+            'feedback-ng': '#B44A3C',
+          },
+          fontFamily: {
+            sans: ['Inter', 'Noto Sans JP', 'sans-serif'],
+            serif: ['Noto Serif JP', 'serif'],
+          },
+        },
+      },
+    };
+  </script>
+  <link rel="stylesheet" href="styles.css?v=20260405-3" />
+  <noscript>
+    <style>
+      #splash-screen {
+        display: none !important;
+      }
+
+      #site-shell {
+        opacity: 1 !important;
+      }
+
+      .reveal-ready {
+        opacity: 1 !important;
+        transform: none !important;
+      }
+    </style>
+  </noscript>
+  <script>
+    (function () {
+      const finishSplashFallback = () => {
+        const splashScreen = document.getElementById('splash-screen');
+
+        if (splashScreen) {
+          splashScreen.style.opacity = '0';
+          splashScreen.style.visibility = 'hidden';
+          splashScreen.style.pointerEvents = 'none';
+        }
+
+        try {
+          sessionStorage.setItem('splashSeen', 'true');
+        } catch (error) {
+          console.warn('sessionStorage is unavailable.');
+        }
+      };
+
+      window.__finishSplashFallback = finishSplashFallback;
+
+      document.addEventListener(
+        'DOMContentLoaded',
+        () => {
+          if (document.documentElement.classList.contains('splash-seen')) {
+            finishSplashFallback();
+            return;
+          }
+
+          window.setTimeout(finishSplashFallback, 1900);
+        },
+        { once: true }
+      );
+    })();
+  </script>
+  <script src="script.js?v=20260405-4" defer></script>
+</head>
+
+<body class="bg-base text-text-main font-sans">
+  <div id="splash-screen" class="opening-screen" aria-hidden="true">
+    <div class="opening-screen__glow"></div>
+    <div class="opening-screen__curtain opening-screen__curtain--top"></div>
+    <div class="opening-screen__curtain opening-screen__curtain--bottom"></div>
+    <div class="opening-screen__inner">
+      <span class="opening-screen__label">TOMINAGA TATEGU</span>
+      <div class="opening-screen__logo-wrap">
+        <img src="image/tategulogologow.svg" alt="富永建具 ロゴ" class="opening-screen__logo" onerror="this.remove();" />
+      </div>
+      <span class="opening-screen__line"></span>
+    </div>
+  </div>
+
+  <div id="site-shell" class="flex flex-col min-h-screen">
+    <header class="sticky top-0 z-50 bg-base/80 backdrop-blur-md border-b border-border">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between h-16">
+          <div class="flex-shrink-0">
+            <a href="index.html"
+              class="text-xl font-serif font-bold text-text-main hover:text-accent-a transition-colors">
+              富永建具
+            </a>
+          </div>
+
+          <nav class="hidden md:flex md:items-center md:space-x-8">
+            <a href="about.html"
+              class="relative text-sm font-medium transition-colors duration-300 text-text-sub hover:text-text-main after:content-[''] after:absolute after:bottom-[-2px] after:left-0 after:h-[1px] after:bg-accent-a after:transition-all after:duration-300 after:w-0 hover:after:w-full">
+              About
+            </a>
+            <a href="services.html"
+              class="relative text-sm font-medium transition-colors duration-300 text-text-main after:content-[''] after:absolute after:bottom-[-2px] after:left-0 after:h-[1px] after:bg-accent-a after:transition-all after:duration-300 after:w-full">
+              services
+            </a>
+            <a href="works.html"
+              class="relative text-sm font-medium transition-colors duration-300 text-text-sub hover:text-text-main after:content-[''] after:absolute after:bottom-[-2px] after:left-0 after:h-[1px] after:bg-accent-a after:transition-all after:duration-300 after:w-0 hover:after:w-full">
+              works
+            </a>
+            <a href="contact.html"
+              class="relative text-sm font-medium transition-colors duration-300 text-text-sub hover:text-text-main after:content-[''] after:absolute after:bottom-[-2px] after:left-0 after:h-[1px] after:bg-accent-a after:transition-all after:duration-300 after:w-0 hover:after:w-full">
+              contact
+            </a>
+          </nav>
+
+          <div class="md:hidden">
+            <button type="button" data-menu-button
+              class="inline-flex items-center justify-center p-2 rounded-md text-text-sub hover:text-text-main focus:outline-none focus:ring-2 focus:ring-inset focus:ring-accent-a"
+              aria-controls="mobile-menu" aria-expanded="false">
+              <span class="sr-only">Open main menu</span>
+              <svg data-menu-icon="open" class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none"
+                viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+              </svg>
+              <svg data-menu-icon="close" class="hidden h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none"
+                viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="md:hidden hidden" id="mobile-menu" data-mobile-menu>
+        <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+          <a href="about.html"
+            class="block px-3 py-2 rounded-md text-base font-medium text-text-sub hover:bg-border/60 hover:text-text-main">About</a>
+          <a href="services.html"
+            class="block px-3 py-2 rounded-md text-base font-medium bg-border text-text-main">services</a>
+          <a href="works.html"
+            class="block px-3 py-2 rounded-md text-base font-medium text-text-sub hover:bg-border/60 hover:text-text-main">works</a>
+          <a href="contact.html"
+            class="block px-3 py-2 rounded-md text-base font-medium text-text-sub hover:bg-border/60 hover:text-text-main">contact</a>
+        </div>
+      </div>
+    </header>
+
+    <main class="flex-grow">
+      <div class="bg-base">
+        <div class="bg-white">
+          <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24 text-center">
+            <div class="reveal-ready">
+              <p class="text-sm font-semibold text-accent-a tracking-widest uppercase">Our Services</p>
+              <h1 class="mt-2 text-4xl md:text-5xl font-serif font-bold text-text-main">事業紹介</h1>
+              <p class="mt-4 max-w-2xl mx-auto text-text-sub">
+                法人のお客様向けの共同開発・量産対応から、個人のお客様向けのオーダーメイド製作まで。
+                ご相談内容に応じた進め方で、建具・什器・家具づくりを支えます。
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-white">
+          <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24">
+            <div class="reveal-ready">
+              <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                <div class="lg:order-1">
+                  <img src="image/servicesB2B.jpeg" alt="B2B: 施工・共同開発・量産"
+                    class="w-full h-auto object-cover rounded-sm" />
+                </div>
+                <div class="lg:order-2">
+                  <p class="font-semibold text-accent-a">法人のお客様へ</p>
+                  <h2 class="mt-2 text-3xl font-serif font-bold text-text-main">B2B: 施工・共同開発・量産</h2>
+                  <p class="mt-6 text-text-sub leading-relaxed">
+                    設計事務所や工務店のパートナーとして、商業施設、オフィス、ホテルなどの空間づくりをサポートします。図面一枚から、複雑な要求に応える試作、安定した品質での量産まで、あらゆるニーズにお応えします。
+                  </p>
+
+                  <div class="mt-10">
+                    <h3 class="text-xl font-semibold text-text-main mb-6">製作の流れ</h3>
+                    <ol class="space-y-6">
+                      <li class="flex">
+                        <span
+                          class="flex items-center justify-center w-8 h-8 font-bold bg-accent-a text-white rounded-full mr-4 flex-shrink-0">1</span>
+                        <div>
+                          <h4 class="font-semibold text-text-main">ご相談・図面レビュー</h4>
+                          <p class="mt-1 text-sm text-text-sub">設計図を基に、意匠・機能・コストを考慮した製作方法をご提案します。</p>
+                        </div>
+                      </li>
+                      <li class="flex">
+                        <span
+                          class="flex items-center justify-center w-8 h-8 font-bold bg-accent-a text-white rounded-full mr-4 flex-shrink-0">2</span>
+                        <div>
+                          <h4 class="font-semibold text-text-main">試作・モックアップ製作</h4>
+                          <p class="mt-1 text-sm text-text-sub">必要に応じて試作品を製作し、質感や納まりを実物でご確認いただきます。</p>
+                        </div>
+                      </li>
+                      <li class="flex">
+                        <span
+                          class="flex items-center justify-center w-8 h-8 font-bold bg-accent-a text-white rounded-full mr-4 flex-shrink-0">3</span>
+                        <div>
+                          <h4 class="font-semibold text-text-main">量産・本製作</h4>
+                          <p class="mt-1 text-sm text-text-sub">承認後、自社工場の徹底した品質管理のもと、本製作に入ります。</p>
+                        </div>
+                      </li>
+                      <li class="flex">
+                        <span
+                          class="flex items-center justify-center w-8 h-8 font-bold bg-accent-a text-white rounded-full mr-4 flex-shrink-0">4</span>
+                        <div>
+                          <h4 class="font-semibold text-text-main">現場調整・納品</h4>
+                          <p class="mt-1 text-sm text-text-sub">現場での施工や調整まで、責任を持って対応いたします。</p>
+                        </div>
+                      </li>
+                    </ol>
+                  </div>
+
+                  <div class="mt-10">
+                    <a href="contact.html"
+                      class="inline-block bg-accent-a text-white font-medium py-3 px-8 rounded-sm hover:bg-opacity-90 transition-all duration-300">
+                      このサービスについて問い合わせる
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24">
+          <div class="reveal-ready">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+              <div class="lg:order-2">
+                <img src="image/servicesB2C.jpeg" alt="B2C: オーダーメイド製作" class="w-full h-auto object-cover rounded-sm" />
+              </div>
+              <div class="lg:order-1">
+                <p class="font-semibold text-accent-a">個人のお客様へ</p>
+                <h2 class="mt-2 text-3xl font-serif font-bold text-text-main">B2C: オーダーメイド製作</h2>
+                <p class="mt-6 text-text-sub leading-relaxed">
+                  「ここに、こんな家具があったら」「このドアを、もっと素敵なデザインに」。そんなお客様一人ひとりの想いを形にするのが、私たちのオーダーメイドサービスです。ドア一枚から造作家具まで、暮らしに寄り添う一品を製作します。
+                </p>
+
+                <div class="mt-10">
+                  <h3 class="text-xl font-semibold text-text-main mb-6">製作の流れ</h3>
+                  <ol class="space-y-6">
+                    <li class="flex">
+                      <span
+                        class="flex items-center justify-center w-8 h-8 font-bold bg-accent-a text-white rounded-full mr-4 flex-shrink-0">1</span>
+                      <div>
+                        <h4 class="font-semibold text-text-main">ご相談・ヒアリング</h4>
+                        <p class="mt-1 text-sm text-text-sub">お客様の理想のイメージ、ライフスタイル、ご予算などを詳しくお伺いします。</p>
+                      </div>
+                    </li>
+                    <li class="flex">
+                      <span
+                        class="flex items-center justify-center w-8 h-8 font-bold bg-accent-a text-white rounded-full mr-4 flex-shrink-0">2</span>
+                      <div>
+                        <h4 class="font-semibold text-text-main">現地調査・採寸</h4>
+                        <p class="mt-1 text-sm text-text-sub">専門スタッフがご自宅へお伺いし、設置場所の正確な寸法を計測します。</p>
+                      </div>
+                    </li>
+                    <li class="flex">
+                      <span
+                        class="flex items-center justify-center w-8 h-8 font-bold bg-accent-a text-white rounded-full mr-4 flex-shrink-0">3</span>
+                      <div>
+                        <h4 class="font-semibold text-text-main">設計・お見積り</h4>
+                        <p class="mt-1 text-sm text-text-sub">ヒアリング内容と採寸結果を基に、最適なデザインと素材をご提案し、お見積りを作成します。</p>
+                      </div>
+                    </li>
+                    <li class="flex">
+                      <span
+                        class="flex items-center justify-center w-8 h-8 font-bold bg-accent-a text-white rounded-full mr-4 flex-shrink-0">4</span>
+                      <div>
+                        <h4 class="font-semibold text-text-main">製作・納品</h4>
+                        <p class="mt-1 text-sm text-text-sub">ご契約後、職人が一つひとつ丁寧に製作。完成後、ご指定の場所へ設置に伺います。</p>
+                      </div>
+                    </li>
+                  </ol>
+                </div>
+
+                <div class="mt-10">
+                  <a href="contact.html"
+                    class="inline-block bg-accent-a text-white font-medium py-3 px-8 rounded-sm hover:bg-opacity-90 transition-all duration-300">
+                    このサービスについて問い合わせる
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-white border-t border-border">
+          <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24">
+            <div class="reveal-ready text-center">
+              <p class="text-sm font-semibold text-accent-a tracking-widest uppercase">Works</p>
+              <h2 class="mt-2 text-3xl md:text-4xl font-serif font-bold text-text-main">事例紹介は別ページでご覧いただけます</h2>
+              <p class="mt-4 max-w-2xl mx-auto text-text-sub">
+                製作事例をカテゴリや顧客区分ごとに見たい方は、事例紹介ページへお進みください。
+                建具、什器、家具の事例を一覧で確認できます。
+              </p>
+              <div class="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
+                <a href="works.html"
+                  class="inline-block bg-accent-a text-white font-medium py-3 px-8 rounded-sm hover:bg-opacity-90 transition-all duration-300">
+                  事例紹介を見る
+                </a>
+                <a href="contact.html"
+                  class="inline-block border border-border text-text-main font-medium py-3 px-8 rounded-sm hover:border-accent-a hover:text-accent-a transition-all duration-300">
+                  問い合わせる
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="bg-accent-b text-base border-t border-border">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div class="md:col-span-2">
+            <h3 class="text-2xl font-serif font-bold text-base">富永建具</h3>
+            <p class="mt-2 text-sm text-gray-400">
+              〒779-1102 徳島県阿南市羽ノ浦町宮倉芝生13-7<br />
+              TEL: 0884-44-2369 (受付時間: 平日 9:00-17:00)<br />
+              MAIL: tominaga@chive.ocn.ne.jp
+            </p>
+            <div class="mt-4 flex space-x-4">
+              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer"
+                class="text-gray-400 hover:text-base transition-colors">
+                <span class="sr-only">Instagram</span>
+                <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path fill-rule="evenodd"
+                    d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.024.06 1.378.06 3.808s-.012 2.784-.06 3.808c-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.024.048-1.378.06-3.808.06s-2.784-.012-3.808-.06c-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.048-1.024-.06-1.378-.06-3.808s.012-2.784.06-3.808c.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 016.345 2.525c.636-.247 1.363-.416 2.427-.465C9.792 2.013 10.146 2 12.315 2zm-1.161 1.545a3.837 3.837 0 00-3.37 3.37c-.045 1.002-.058 1.334-.058 3.59s.013 2.588.058 3.59a3.837 3.837 0 003.37 3.37c1.002.045 1.334.058 3.59.058s2.588-.013 3.59-.058a3.837 3.837 0 003.37-3.37c.045-1.002.058-1.334.058-3.59s-.013-2.588-.058-3.59a3.837 3.837 0 00-3.37-3.37c-1.002-.045-1.334-.058-3.59-.058s-2.588.013-3.59.058zM12 8.25a3.75 3.75 0 100 7.5 3.75 3.75 0 000-7.5zM12 14a2 2 0 110-4 2 2 0 010 4zm4-7.5a1 1 0 100-2 1 1 0 000 2z"
+                    clip-rule="evenodd" />
+                </svg>
+              </a>
+            </div>
+          </div>
+          <div>
+            <h4 class="text-sm font-semibold text-gray-300 tracking-wider uppercase">サイトマップ</h4>
+            <ul class="mt-4 space-y-2">
+              <li><a href="about.html" class="text-sm text-gray-400 hover:text-base transition-colors">会社紹介</a></li>
+              <li><a href="services.html" class="text-sm text-gray-400 hover:text-base transition-colors">事業紹介</a></li>
+              <li><a href="works.html" class="text-sm text-gray-400 hover:text-base transition-colors">事例紹介</a></li>
+              <li><a href="contact.html" class="text-sm text-gray-400 hover:text-base transition-colors">問い合わせ</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="mt-8 border-t border-gray-700 pt-8 text-center">
+          <p class="text-sm text-gray-500">&copy; <span data-current-year></span> Tominaga Tategu. All rights reserved.
+          </p>
+        </div>
+      </div>
+    </footer>
+  </div>
+</body>
+
+</html>

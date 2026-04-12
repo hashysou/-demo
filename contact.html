@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="富永建具へのお問い合わせ先や関連アカウントをご案内しています。" />
+  <title>問い合わせ｜Tominaga Tategu</title>
+  <script>
+    document.documentElement.classList.add('js-enabled');
+    try {
+      if (sessionStorage.getItem('splashSeen')) {
+        document.documentElement.classList.add('splash-seen');
+      }
+    } catch (error) {
+      console.warn('sessionStorage is unavailable.');
+    }
+  </script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@400;700&display=swap"
+    rel="stylesheet" />
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            base: '#F5F5F3',
+            'text-main': '#1E1E1E',
+            'text-sub': '#3C3C3C',
+            border: '#E3E3E0',
+            'accent-a': '#B88B4A',
+            'accent-b': '#0E1A16',
+            'feedback-ok': '#1F7A5B',
+            'feedback-ng': '#B44A3C',
+          },
+          fontFamily: {
+            sans: ['Inter', 'Noto Sans JP', 'sans-serif'],
+            serif: ['Noto Serif JP', 'serif'],
+          },
+        },
+      },
+    };
+  </script>
+  <link rel="stylesheet" href="styles.css?v=20260405-3" />
+  <noscript>
+    <style>
+      #splash-screen {
+        display: none !important;
+      }
+
+      #site-shell {
+        opacity: 1 !important;
+      }
+
+      .reveal-ready {
+        opacity: 1 !important;
+        transform: none !important;
+      }
+    </style>
+  </noscript>
+  <script>
+    (function () {
+      const finishSplashFallback = () => {
+        const splashScreen = document.getElementById('splash-screen');
+
+        if (splashScreen) {
+          splashScreen.style.opacity = '0';
+          splashScreen.style.visibility = 'hidden';
+          splashScreen.style.pointerEvents = 'none';
+        }
+
+        try {
+          sessionStorage.setItem('splashSeen', 'true');
+        } catch (error) {
+          console.warn('sessionStorage is unavailable.');
+        }
+      };
+
+      window.__finishSplashFallback = finishSplashFallback;
+
+      document.addEventListener(
+        'DOMContentLoaded',
+        () => {
+          if (document.documentElement.classList.contains('splash-seen')) {
+            finishSplashFallback();
+            return;
+          }
+
+          window.setTimeout(finishSplashFallback, 1900);
+        },
+        { once: true }
+      );
+    })();
+  </script>
+  <script src="script.js?v=20260405-4" defer></script>
+</head>
+
+<body class="bg-base text-text-main font-sans">
+  <div id="splash-screen" class="opening-screen" aria-hidden="true">
+    <div class="opening-screen__glow"></div>
+    <div class="opening-screen__curtain opening-screen__curtain--top"></div>
+    <div class="opening-screen__curtain opening-screen__curtain--bottom"></div>
+    <div class="opening-screen__inner">
+      <span class="opening-screen__label">TOMINAGA TATEGU</span>
+      <div class="opening-screen__logo-wrap">
+        <img src="image/tategulogologow.svg" alt="富永建具 ロゴ" class="opening-screen__logo" onerror="this.remove();" />
+      </div>
+      <span class="opening-screen__line"></span>
+    </div>
+  </div>
+
+  <div id="site-shell" class="flex flex-col min-h-screen">
+    <header class="sticky top-0 z-50 bg-base/80 backdrop-blur-md border-b border-border">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between h-16">
+          <div class="flex-shrink-0">
+            <a href="index.html"
+              class="text-xl font-serif font-bold text-text-main hover:text-accent-a transition-colors">
+              富永建具
+            </a>
+          </div>
+
+          <nav class="hidden md:flex md:items-center md:space-x-8">
+            <a href="about.html"
+              class="relative text-sm font-medium transition-colors duration-300 text-text-sub hover:text-text-main after:content-[''] after:absolute after:bottom-[-2px] after:left-0 after:h-[1px] after:bg-accent-a after:transition-all after:duration-300 after:w-0 hover:after:w-full">
+              About
+            </a>
+            <a href="services.html"
+              class="relative text-sm font-medium transition-colors duration-300 text-text-sub hover:text-text-main after:content-[''] after:absolute after:bottom-[-2px] after:left-0 after:h-[1px] after:bg-accent-a after:transition-all after:duration-300 after:w-0 hover:after:w-full">
+              services
+            </a>
+            <a href="works.html"
+              class="relative text-sm font-medium transition-colors duration-300 text-text-sub hover:text-text-main after:content-[''] after:absolute after:bottom-[-2px] after:left-0 after:h-[1px] after:bg-accent-a after:transition-all after:duration-300 after:w-0 hover:after:w-full">
+              works
+            </a>
+            <a href="contact.html"
+              class="relative text-sm font-medium transition-colors duration-300 text-text-main after:content-[''] after:absolute after:bottom-[-2px] after:left-0 after:h-[1px] after:bg-accent-a after:transition-all after:duration-300 after:w-full">
+              contact
+            </a>
+          </nav>
+
+          <div class="md:hidden">
+            <button type="button" data-menu-button
+              class="inline-flex items-center justify-center p-2 rounded-md text-text-sub hover:text-text-main focus:outline-none focus:ring-2 focus:ring-inset focus:ring-accent-a"
+              aria-controls="mobile-menu" aria-expanded="false">
+              <span class="sr-only">Open main menu</span>
+              <svg data-menu-icon="open" class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none"
+                viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+              </svg>
+              <svg data-menu-icon="close" class="hidden h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none"
+                viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="md:hidden hidden" id="mobile-menu" data-mobile-menu>
+        <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+          <a href="about.html"
+            class="block px-3 py-2 rounded-md text-base font-medium text-text-sub hover:bg-border/60 hover:text-text-main">About</a>
+          <a href="services.html"
+            class="block px-3 py-2 rounded-md text-base font-medium text-text-sub hover:bg-border/60 hover:text-text-main">services</a>
+          <a href="works.html"
+            class="block px-3 py-2 rounded-md text-base font-medium text-text-sub hover:bg-border/60 hover:text-text-main">works</a>
+          <a href="contact.html"
+            class="block px-3 py-2 rounded-md text-base font-medium bg-border text-text-main">contact</a>
+        </div>
+      </div>
+    </header>
+
+    <main class="flex-grow">
+      <div class="bg-base">
+        <div class="bg-white py-12 md:py-20 border-b border-border">
+          <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div class="reveal-ready">
+              <h1 class="text-4xl md:text-5xl font-serif font-bold text-text-main">問い合わせ</h1>
+              <p class="mt-4 text-lg text-text-sub">ご相談、お見積りの依頼はこちらから</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-white">
+          <div class="reveal-ready">
+            <section class="font-sans text-text-main max-w-[72ch] mx-auto px-4 py-12 md:py-16">
+              <h2 class="sr-only">有限会社富永建具</h2>
+              <img src="image/tategulogo.svg" alt="有限会社富永建具 ロゴ"
+                class="block mx-auto h-auto max-h-[72px] w-auto mb-12" />
+
+              <section class="text-center mb-12" aria-labelledby="company-info">
+                <h3 id="company-info" class="sr-only">会社基本情報</h3>
+                <address class="not-italic mb-6 text-sm text-text-sub leading-relaxed">
+                  〒779-1102 徳島県阿南市羽ノ浦町宮倉芝生13-7
+                </address>
+                <ul class="space-y-3 text-sm text-text-sub">
+                  <li>Tel：<a href="tel:0884442369"
+                      class="text-text-main underline decoration-accent-a decoration-[1px] underline-offset-4 hover:text-accent-a transition-colors motion-reduce:transition-none">TEL
+                      0884-44-2369</a></li>
+                  <li>Fax：0884-44-2061</li>
+                  <li>Email：<a href="mailto:tominaga@chive.ocn.ne.jp"
+                      class="text-text-main underline decoration-accent-a decoration-[1px] underline-offset-4 hover:text-accent-a transition-colors motion-reduce:transition-none">tominaga@chive.ocn.ne.jp</a>
+                  </li>
+                  <li>営業時間：平日 9:00-18:00</li>
+                </ul>
+              </section>
+
+              <nav class="text-center mb-12 pt-12 border-t border-border" aria-label="運営・関連アカウント">
+                <p class="mb-5 text-xs font-semibold tracking-[0.28em] uppercase text-text-sub">Instagram</p>
+                <ul class="flex justify-center items-center gap-x-6 gap-y-2 flex-wrap">
+                  <li>
+                    <a href="https://instagram.com/yuji_tominaga" target="_blank" rel="noopener noreferrer"
+                      class="inline-flex items-center gap-2 text-sm text-text-main underline decoration-accent-a decoration-[1px] underline-offset-4 hover:text-accent-a transition-colors motion-reduce:transition-none">
+                      <svg class="h-4 w-4 shrink-0" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                        <path fill-rule="evenodd"
+                          d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.024.06 1.378.06 3.808s-.012 2.784-.06 3.808c-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.024.048-1.378.06-3.808.06s-2.784-.012-3.808-.06c-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.048-1.024-.06-1.378-.06-3.808s.012-2.784.06-3.808c.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 016.345 2.525c.636-.247 1.363-.416 2.427-.465C9.792 2.013 10.146 2 12.315 2zm-1.161 1.545a3.837 3.837 0 00-3.37 3.37c-.045 1.002-.058 1.334-.058 3.59s.013 2.588.058 3.59a3.837 3.837 0 003.37 3.37c1.002.045 1.334.058 3.59.058s2.588-.013 3.59-.058a3.837 3.837 0 003.37-3.37c.045-1.002.058-1.334.058-3.59s-.013-2.588-.058-3.59a3.837 3.837 0 00-3.37-3.37c-1.002-.045-1.334-.058-3.59-.058s-2.588.013-3.59.058zM12 8.25a3.75 3.75 0 100 7.5 3.75 3.75 0 000-7.5zM12 14a2 2 0 110-4 2 2 0 010 4zm4-7.5a1 1 0 100-2 1 1 0 000 2z"
+                          clip-rule="evenodd" />
+                      </svg>
+                      @yuji_tominaga
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://instagram.com/koyasoko" target="_blank" rel="noopener noreferrer"
+                      class="inline-flex items-center gap-2 text-sm text-text-main underline decoration-accent-a decoration-[1px] underline-offset-4 hover:text-accent-a transition-colors motion-reduce:transition-none">
+                      <svg class="h-4 w-4 shrink-0" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                        <path fill-rule="evenodd"
+                          d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.024.06 1.378.06 3.808s-.012 2.784-.06 3.808c-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.024.048-1.378.06-3.808.06s-2.784-.012-3.808-.06c-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.048-1.024-.06-1.378-.06-3.808s.012-2.784.06-3.808c.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 016.345 2.525c.636-.247 1.363-.416 2.427-.465C9.792 2.013 10.146 2 12.315 2zm-1.161 1.545a3.837 3.837 0 00-3.37 3.37c-.045 1.002-.058 1.334-.058 3.59s.013 2.588.058 3.59a3.837 3.837 0 003.37 3.37c1.002.045 1.334.058 3.59.058s2.588-.013 3.59-.058a3.837 3.837 0 003.37-3.37c.045-1.002.058-1.334.058-3.59s-.013-2.588-.058-3.59a3.837 3.837 0 00-3.37-3.37c-1.002-.045-1.334-.058-3.59-.058s-2.588.013-3.59.058zM12 8.25a3.75 3.75 0 100 7.5 3.75 3.75 0 000-7.5zM12 14a2 2 0 110-4 2 2 0 010 4zm4-7.5a1 1 0 100-2 1 1 0 000 2z"
+                          clip-rule="evenodd" />
+                      </svg>
+                      @koyasoko
+                    </a>
+                  </li>
+                </ul>
+              </nav>
+
+              <section class="pt-12 border-t border-border" aria-label="関連ブランド／拠点">
+                <p class="mb-5 text-center text-xs font-semibold tracking-[0.28em] uppercase text-text-sub">Related Brands</p>
+                <ul class="flex justify-center items-center gap-x-8 gap-y-4 flex-wrap">
+                  <li>
+                    <a href="https://ugfurniture.com" target="_blank" rel="noopener noreferrer"
+                      class="block hover:opacity-80 transition-opacity motion-reduce:transition-none">
+                      <img src="image/contact_UG_logo.svg" alt="U,G FURNITURE ロゴ" class="h-10 w-auto" />
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://www.instagram.com/koyasoko" target="_blank" rel="noopener noreferrer"
+                      class="block hover:opacity-80 transition-opacity motion-reduce:transition-none">
+                      <img src="image/contact_SOKO_KOYA.svg" alt="KOYA SO-KO ロゴ" class="h-10 w-auto" />
+                    </a>
+                  </li>
+                </ul>
+              </section>
+            </section>
+
+            <div class="max-w-[72ch] mx-auto px-4 pb-12 md:pb-16">
+              <div class="overflow-hidden rounded-sm border border-border h-[22rem] md:h-96">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3309.175698852538!2d134.6195973757127!3d33.962323273191!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x355313f6971f9abd%3A0x139f2667b52b7525!2z44CSNzc5LTExMDIg5b6z5bO255yM6Zi_5Y2X5biC576944OO5rWm55S65a6u5YCJ6Iqd55Sf77yR77yT4oiS77yX!5e0!3m2!1sja!2sjp!4v1775385879892!5m2!1sja!2sjp"
+                  width="100%" height="100%" style="border: 0;" allowfullscreen loading="lazy"
+                  referrerpolicy="no-referrer-when-downgrade" title="Google Map of Tokushima"></iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="bg-accent-b text-base border-t border-border">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div class="md:col-span-2">
+            <h3 class="text-2xl font-serif font-bold text-base">富永建具</h3>
+            <p class="mt-2 text-sm text-gray-400">
+              〒779-1102 徳島県阿南市羽ノ浦町宮倉芝生13-7<br />
+              TEL: 0884-44-2369 (受付時間: 平日 9:00-17:00)<br />
+              MAIL: tominaga@chive.ocn.ne.jp
+            </p>
+            <div class="mt-4 flex space-x-4">
+              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer"
+                class="text-gray-400 hover:text-base transition-colors">
+                <span class="sr-only">Instagram</span>
+                <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path fill-rule="evenodd"
+                    d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.024.06 1.378.06 3.808s-.012 2.784-.06 3.808c-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.024.048-1.378.06-3.808.06s-2.784-.012-3.808-.06c-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.048-1.024-.06-1.378-.06-3.808s.012-2.784.06-3.808c.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 016.345 2.525c.636-.247 1.363-.416 2.427-.465C9.792 2.013 10.146 2 12.315 2zm-1.161 1.545a3.837 3.837 0 00-3.37 3.37c-.045 1.002-.058 1.334-.058 3.59s.013 2.588.058 3.59a3.837 3.837 0 003.37 3.37c1.002.045 1.334.058 3.59.058s2.588-.013 3.59-.058a3.837 3.837 0 003.37-3.37c.045-1.002.058-1.334.058-3.59s-.013-2.588-.058-3.59a3.837 3.837 0 00-3.37-3.37c-1.002-.045-1.334-.058-3.59-.058s-2.588.013-3.59.058zM12 8.25a3.75 3.75 0 100 7.5 3.75 3.75 0 000-7.5zM12 14a2 2 0 110-4 2 2 0 010 4zm4-7.5a1 1 0 100-2 1 1 0 000 2z"
+                    clip-rule="evenodd" />
+                </svg>
+              </a>
+            </div>
+          </div>
+          <div>
+            <h4 class="text-sm font-semibold text-gray-300 tracking-wider uppercase">サイトマップ</h4>
+            <ul class="mt-4 space-y-2">
+              <li><a href="about.html" class="text-sm text-gray-400 hover:text-base transition-colors">会社紹介</a></li>
+              <li><a href="services.html" class="text-sm text-gray-400 hover:text-base transition-colors">事業紹介</a></li>
+              <li><a href="works.html" class="text-sm text-gray-400 hover:text-base transition-colors">事例紹介</a></li>
+              <li><a href="contact.html" class="text-sm text-gray-400 hover:text-base transition-colors">問い合わせ</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="mt-8 border-t border-gray-700 pt-8 text-center">
+          <p class="text-sm text-gray-500">&copy; <span data-current-year></span> Tominaga Tategu. All rights reserved.
+          </p>
+        </div>
+      </div>
+    </footer>
+  </div>
+</body>
+
+</html>
